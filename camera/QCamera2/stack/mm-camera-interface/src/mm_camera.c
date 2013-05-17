@@ -99,7 +99,7 @@ uint8_t mm_camera_util_chip_is_a_family(void)
         fscanf(fp, "%d", &id);
         fclose(fp);
     }
-    if (id == 126)
+    if (id == 126 || id == 145)
         return FALSE;
     else
         return TRUE;
