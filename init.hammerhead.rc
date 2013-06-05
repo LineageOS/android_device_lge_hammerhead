@@ -297,7 +297,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
     oneshot
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
-    -puse_p2p_group_interface=1 \
+    -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 \
     -g@android:wpa_wlan0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
