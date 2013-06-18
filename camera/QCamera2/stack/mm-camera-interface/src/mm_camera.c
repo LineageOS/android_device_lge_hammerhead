@@ -93,16 +93,11 @@ mm_channel_t * mm_camera_util_get_channel_by_handler(
  *==========================================================================*/
 uint8_t mm_camera_util_chip_is_a_family(void)
 {
-    int id = 0;
-    FILE *fp;
-    if ((fp = fopen("/sys/devices/system/soc/soc0/id", "r")) != NULL) {
-        fscanf(fp, "%d", &id);
-        fclose(fp);
-    }
-    if (id == 126 || id == 145)
-        return FALSE;
-    else
-        return TRUE;
+#ifdef USE_A_FAMILY
+    return TRUE;
+#else
+    return FALSE;
+#endif
 }
 
 /*===========================================================================
