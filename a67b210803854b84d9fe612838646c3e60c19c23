@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da0c15f0_1fa02b90",
+        "filename": "cmhw/org/cyanogenmod/hardware/TapToWake.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2014-05-10T11:36:49Z",
+      "side": 1,
+      "message": "I cannot write the state value with FileUtils.writeLine(). sepolicy?",
+      "revId": "a67b210803854b84d9fe612838646c3e60c19c23",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
