@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "da0c15f0_d3cfccb1",
+        "filename": "cmhw/org/cyanogenmod/hardware/TapToWake.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2134
+      },
+      "writtenOn": "2014-05-12T22:55:29Z",
+      "side": 1,
+      "message": "Better: return (\"1\".equals(FileUtils.readOneLine(CONTROL_PATH)));",
+      "revId": "a67b210803854b84d9fe612838646c3e60c19c23",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da0c15f0_1fa02b90",
         "filename": "cmhw/org/cyanogenmod/hardware/TapToWake.java",
         "patchSetId": 1
