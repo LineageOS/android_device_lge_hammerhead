@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bab6814e_64f9f24d",
+        "filename": "sepolicy/healthd.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2975
+      },
+      "writtenOn": "2014-11-24T19:38:33Z",
+      "side": 1,
+      "message": "recommend using the macro r_dir_perms (defined in external/sepolicy/global_macros) instead of listing out individual permissions (this line and line 2). More robust that way.",
+      "revId": "7eb46ebe92498b9121baac230edcaab9c3030751",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab6814e_c4941eea",
+        "filename": "sepolicy/healthd.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2975
+      },
+      "writtenOn": "2014-11-24T19:38:33Z",
+      "side": 1,
+      "message": "more robust to use rw_file_perms (defined in external/sepolicy/global_macros)",
+      "revId": "7eb46ebe92498b9121baac230edcaab9c3030751",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
