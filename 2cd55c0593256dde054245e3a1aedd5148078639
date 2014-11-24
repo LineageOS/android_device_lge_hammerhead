@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bab6814e_049f4604",
+        "filename": "sepolicy/mpdecision.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2975
+      },
+      "writtenOn": "2014-11-24T19:41:13Z",
+      "side": 1,
+      "message": "system_data_file is every file on /data which doesn\u0027t have a more specific label. This is an overly broad excessive grant. I\u0027d recommend refining this to a more specific label, creating it if necessary.",
+      "revId": "2cd55c0593256dde054245e3a1aedd5148078639",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab6814e_e4a3224e",
+        "filename": "sepolicy/sdcardd.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2975
+      },
+      "writtenOn": "2014-11-24T19:41:13Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be necessary if the restorecon_recursive in /data was properly performed.",
+      "revId": "2cd55c0593256dde054245e3a1aedd5148078639",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab6814e_44894eca",
+        "filename": "sepolicy/tee.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2975
+      },
+      "writtenOn": "2014-11-24T19:41:13Z",
+      "side": 1,
+      "message": "search is already included in r_dir_perms. Please see external/sepolicy/global_macros",
+      "revId": "2cd55c0593256dde054245e3a1aedd5148078639",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
