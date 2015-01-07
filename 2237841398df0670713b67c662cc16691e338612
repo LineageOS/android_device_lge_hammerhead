@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aa08908_a61b9e1a",
+        "filename": "gps.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 883
+      },
+      "writtenOn": "2015-01-07T14:28:56Z",
+      "side": 1,
+      "message": "This does not exist.. I just ran a ping check.gpsone time server does exist",
+      "revId": "2237841398df0670713b67c662cc16691e338612",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
