@@ -306,6 +306,8 @@ typedef struct{
     cam_rational_type_t calibration_transform2[3][3];
 
     cam_opaque_raw_format_t opaque_raw_fmt;
+
+    uint8_t flash_dev_name[QCAMERA_MAX_FILEPATH_LENGTH];
 } cam_capability_t;
 
 typedef enum {
