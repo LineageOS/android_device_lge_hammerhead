@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2014, The Linux Foundataion. All rights reserved.
+/* Copyright (c) 2012-2015, The Linux Foundataion. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -35,6 +35,7 @@
 #include <utils/Errors.h>
 #include <hardware/camera3.h>
 
+#include "../util/QCameraFlash.h"
 #include "QCamera3Factory.h"
 
 using namespace android;
@@ -157,6 +158,23 @@ int QCamera3Factory::open_legacy(const struct hw_module_t* module,
 }
 
 /*===========================================================================
+ * FUNCTION   : set_torch_mode
+ *
+ * DESCRIPTION: Attempt to turn on or off the torch mode of the flash unit.
+ *
+ * PARAMETERS :
+ *   @camera_id : camera ID
+ *   @on        : Indicates whether to turn the flash on or off
+ *
+ * RETURN     : 0  -- success
+ *              none-zero failure code
+ *==========================================================================*/
+int QCamera3Factory::set_torch_mode(const char* camera_id, bool on)
+{
+    return gQCamera3Factory->setTorchMode(camera_id, on);
+}
+
+/*===========================================================================
  * FUNCTION   : getNumberOfCameras
  *
  * DESCRIPTION: query number of cameras detected
@@ -215,6 +233,12 @@ int QCamera3Factory::setCallbacks(const camera_module_callbacks_t *callbacks)
 {
     int rc = NO_ERROR;
     mCallbacks = callbacks;
+
+    rc = QCameraFlash::getInstance().registerCallbacks(callbacks);
+    if (rc != 0) {
+        ALOGE("%s : Failed to register callbacks with flash module!", __func__);
+    }
+
     return rc;
 }
 
@@ -283,6 +307,70 @@ int QCamera3Factory::camera_device_open(
 struct hw_module_methods_t QCamera3Factory::mModuleMethods = {
     .open = QCamera3Factory::camera_device_open,
 };
+
+/*===========================================================================
+ * FUNCTION   : setTorchMode
+ *
+ * DESCRIPTION: Attempt to turn on or off the torch mode of the flash unit.
+ *
+ * PARAMETERS :
+ *   @camera_id : camera ID
+ *   @on        : Indicates whether to turn the flash on or off
+ *
+ * RETURN     : 0  -- success
+ *              none-zero failure code
+ *==========================================================================*/
+int QCamera3Factory::setTorchMode(const char* camera_id, bool on)
+{
+    int retVal(0);
+    long cameraIdLong(-1);
+    int cameraIdInt(-1);
+    char* endPointer = NULL;
+    errno = 0;
+    QCameraFlash& flash = QCameraFlash::getInstance();
+
+    cameraIdLong = strtol(camera_id, &endPointer, 10);
+
+    if ((errno == ERANGE) ||
+            (cameraIdLong < 0) ||
+            (cameraIdLong >= static_cast<long>(get_number_of_cameras())) ||
+            (endPointer == camera_id) ||
+            (*endPointer != '\0')) {
+        retVal = -EINVAL;
+    } else if (on) {
+        cameraIdInt = static_cast<int>(cameraIdLong);
+        retVal = flash.initFlash(cameraIdInt);
+
+        if (retVal == 0) {
+            retVal = flash.setFlashMode(cameraIdInt, on);
+            if ((retVal == 0) && (mCallbacks != NULL)) {
+                mCallbacks->torch_mode_status_change(mCallbacks,
+                        camera_id,
+                        TORCH_MODE_STATUS_AVAILABLE_ON);
+            } else if (retVal == -EALREADY) {
+                // Flash is already on, so treat this as a success.
+                retVal = 0;
+            }
+        }
+    } else {
+        cameraIdInt = static_cast<int>(cameraIdLong);
+        retVal = flash.setFlashMode(cameraIdInt, on);
+
+        if (retVal == 0) {
+            retVal = flash.deinitFlash(cameraIdInt);
+            if ((retVal == 0) && (mCallbacks != NULL)) {
+                mCallbacks->torch_mode_status_change(mCallbacks,
+                        camera_id,
+                        TORCH_MODE_STATUS_AVAILABLE_OFF);
+            }
+        } else if (retVal == -EALREADY) {
+            // Flash is already off, so treat this as a success.
+            retVal = 0;
+        }
+    }
+
+    return retVal;
+}
 
 }; // namespace qcamera
 
