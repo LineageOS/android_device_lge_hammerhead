@@ -16,6 +16,24 @@
       "revId": "75ae308c15cbd4cd2df58eacc66525e9bc3edb8f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac665da_29bfa9d1",
+        "filename": "releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-04-01T10:40:34Z",
+      "side": 1,
+      "message": "We could do that to be more precise, yes. I did it this way because I\u0027m kind of lazy :P",
+      "parentUuid": "5ac665da_49e9451a",
+      "revId": "75ae308c15cbd4cd2df58eacc66525e9bc3edb8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
