@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac665da_49e9451a",
+        "filename": "releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 6315
+      },
+      "writtenOn": "2015-04-01T08:44:44Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we def FindBootloader()?",
+      "revId": "75ae308c15cbd4cd2df58eacc66525e9bc3edb8f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
