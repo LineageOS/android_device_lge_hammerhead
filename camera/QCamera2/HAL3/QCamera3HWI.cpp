@@ -4649,10 +4649,30 @@ int QCamera3HardwareInterface::getCamInfo(int cameraId,
         break;
     }
 
-
     info->orientation = gCamCapability[cameraId]->sensor_mount_angle;
     info->device_version = CAMERA_DEVICE_API_VERSION_3_2;
     info->static_camera_characteristics = gStaticMetadata[cameraId];
+
+    //For now assume both cameras can operate independently.
+    info->conflicting_devices = NULL;
+    info->conflicting_devices_length = 0;
+
+    //resource cost is 100 * MIN(1.0, m/M),
+    //where m is throughput requirement with maximum stream configuration
+    //and M is CPP maximum throughput.
+    float max_fps = 0.0;
+    for (uint32_t i = 0;
+            i < gCamCapability[cameraId]->fps_ranges_tbl_cnt; i++) {
+        if (max_fps < gCamCapability[cameraId]->fps_ranges_tbl[i].max_fps)
+            max_fps = gCamCapability[cameraId]->fps_ranges_tbl[i].max_fps;
+    }
+    float ratio = 1.0 * MAX_PROCESSED_STREAMS *
+            gCamCapability[cameraId]->active_array_size.width *
+            gCamCapability[cameraId]->active_array_size.height * max_fps /
+            gCamCapability[cameraId]->max_pixel_bandwidth;
+    info->resource_cost = 100 * MIN(1.0, ratio);
+    ALOGI("%s: camera %d resource cost is %d", __func__, cameraId,
+            info->resource_cost);
 
     return rc;
 }
