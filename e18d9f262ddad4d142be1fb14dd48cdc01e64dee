@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ac371cc_cb089794",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 1458
+      },
+      "writtenOn": "2015-04-16T07:06:49Z",
+      "side": 1,
+      "message": "This should be hammerhead folder, not hammerheadcaf\n\nit brakes build if you don\u0027t have caf variant synced",
+      "revId": "e18d9f262ddad4d142be1fb14dd48cdc01e64dee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
