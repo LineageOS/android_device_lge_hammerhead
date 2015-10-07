@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f287b81_48dc0346",
+        "filename": "cm.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6334
+      },
+      "writtenOn": "2015-10-07T23:48:20Z",
+      "side": 1,
+      "message": "Update yo fingerprint yo",
+      "revId": "b48e30288d62147772e1836812b9f3241c5f529f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
