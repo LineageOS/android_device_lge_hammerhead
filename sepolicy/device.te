@@ -12,6 +12,8 @@ type power_control_device, dev_type;
 
 type modem_block_device, dev_type;
 
+type persist_block_device, dev_type;
+
 # secure software download partition
 type ssd_block_device, dev_type;
 
