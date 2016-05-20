@@ -1,0 +1,4 @@
+# domain_deprecated attribute is being removed from core policy. Leave it
+# in device-specific policy for device-specific domains. Unlike core policy,
+# device-specific policy will eventually be deprecated.
+attribute device_domain_deprecated;
