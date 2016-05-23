@@ -13,5 +13,6 @@ allow time time_data_file:file create_file_perms;
 allow time shared_log_device:chr_file rw_file_perms;
 allow time alarm_device:chr_file rw_file_perms;
 allow time self:socket *;
+allowxperm time self:socket ioctl msm_sock_ipc_ioctls;
 
 allow time self:capability { setuid setgid };

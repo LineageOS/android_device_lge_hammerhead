@@ -23,6 +23,8 @@ allow rmt ssd_block_device:blk_file rw_file_perms;
 allow rmt shared_log_device:chr_file rw_file_perms;
 
 allow rmt self:socket create_socket_perms;
+allowxperm rmt self:socket ioctl msm_sock_ipc_ioctls;
+
 allow rmt cgroup:dir { create add_name };
 
 # Wake lock access
