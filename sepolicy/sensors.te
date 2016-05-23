@@ -42,6 +42,7 @@ wakelock_use(sensors)
 allow sensors cgroup:dir { create add_name };
 
 allow sensors self:socket *;
+allowxperm sensors self:socket ioctl msm_sock_ipc_ioctls;
 
 # Access shared memory logger
 allow sensors shared_log_device:chr_file rw_file_perms;

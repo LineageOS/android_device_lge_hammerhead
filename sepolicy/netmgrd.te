@@ -7,6 +7,7 @@ init_daemon_domain(netmgrd)
 
 # Uses network sockets.
 net_domain(netmgrd)
+allowxperm netmgrd self:udp_socket ioctl priv_sock_ioctls;
 
 # Starts as (root,radio) changes to (radio,radio)
 allow netmgrd self:capability { setuid setgid net_admin net_raw };
@@ -14,7 +15,7 @@ allow netmgrd self:capability { setuid setgid net_admin net_raw };
 # Triggers a sys_module denial, but kernel has CONFIG_MODULES=n.
 dontaudit netmgrd self:capability sys_module;
 
-allow netmgrd self:netlink_socket create_socket_perms;
+allow netmgrd self:netlink_socket create_socket_perms_no_ioctl;
 allow netmgrd self:netlink_route_socket nlmsg_write;
 
 # Talk to qmuxd (qmux_radio)
