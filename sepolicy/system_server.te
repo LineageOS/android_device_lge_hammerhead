@@ -18,10 +18,13 @@ allow system_server mpdecision_socket:dir search;
 allow system_server ramdump_data_file:dir r_dir_perms;
 allow system_server ramdump_data_file:file r_file_perms;
 
-allow system_server self:netlink_socket create_socket_perms;
+allow system_server self:netlink_socket create_socket_perms_no_ioctl;
 
 # Reading from /persist/wifi/.macaddr
 allow system_server persist_file:dir r_dir_perms;
 r_dir_file(system_server, persist_wifi_file)
 
 allow system_server sysfs_thermal:file r_file_perms;
+
+allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D };
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;

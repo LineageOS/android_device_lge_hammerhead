@@ -5,3 +5,4 @@ type irsc_util_exec, exec_type, file_type;
 init_daemon_domain(irsc_util)
 
 allow irsc_util self:socket create_socket_perms;
+allowxperm irsc_util self:socket ioctl msm_sock_ipc_ioctls;
