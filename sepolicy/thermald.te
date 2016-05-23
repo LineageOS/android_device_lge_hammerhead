@@ -6,6 +6,7 @@ type thermald_exec, exec_type, file_type;
 init_daemon_domain(thermald)
 
 allow thermald self:socket create_socket_perms;
+allowxperm thermald self:socket ioctl msm_sock_ipc_ioctls;
 
 # CPU hotplug uevent
 allow thermald self:netlink_kobject_uevent_socket { create setopt bind read };

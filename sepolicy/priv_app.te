@@ -1,0 +1,1 @@
+allowxperm priv_app self:udp_socket ioctl { SIOCGIWESSID };
