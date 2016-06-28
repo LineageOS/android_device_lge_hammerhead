@@ -22,6 +22,30 @@
       "revId": "fc43052236d1f90f7aa956216093e68d81666cbf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3fa7e38b_98efc5e8",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2016-06-28T18:06:13Z",
+      "side": 1,
+      "message": "Not sure. Just added it because entry is missing.\nIt\u0027s in muppets for hammerhead and hhcaf. But it\u0027s not in latest stock rom from google.",
+      "parentUuid": "3fa7e38b_d8e53d0c",
+      "range": {
+        "startLine": 181,
+        "startChar": 0,
+        "endLine": 181,
+        "endChar": 31
+      },
+      "revId": "fc43052236d1f90f7aa956216093e68d81666cbf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
