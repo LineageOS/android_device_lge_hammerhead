@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_168f062b",
+        "filename": "camera/QCamera2/HAL/Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2195
+      },
+      "writtenOn": "2016-08-26T18:53:40Z",
+      "side": 1,
+      "message": "There\u0027s this too.",
+      "revId": "dedc6def029a018ac29ae90b95b543737ea7b9d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
