@@ -31,6 +31,10 @@ allow sensors sensors_device:chr_file rw_file_perms;
 # Access power management controls
 allow sensors power_control_device:chr_file w_file_perms;
 
+# Read /sys/devices/system/soc/soc0/hw_platform
+allow sensors sysfs:file r_file_perms;
+allow sensors sysfs:dir r_dir_perms;
+
 # Access to /persist/sensors
 allow sensors persist_file:dir r_dir_perms;
 allow sensors persist_sensors_file:dir rw_dir_perms;
