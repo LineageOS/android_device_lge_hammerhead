@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f681702_c3f3a7e6",
+        "filename": "power/power_hammerhead.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 13897
+      },
+      "writtenOn": "2016-12-17T13:23:21Z",
+      "side": 0,
+      "message": "This should stay.",
+      "range": {
+        "startLine": 342,
+        "startChar": 65,
+        "endLine": 342,
+        "endChar": 70
+      },
+      "revId": "91050cba5e3b36d585a23cda9ce3627e4f0a92b8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f681702_03fe3fad",
+        "filename": "power/power_hammerhead.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 13897
+      },
+      "writtenOn": "2016-12-17T13:23:21Z",
+      "side": 0,
+      "message": "Even if this is not compiled, I\u0027d update the code here as well.",
+      "range": {
+        "startLine": 353,
+        "startChar": 42,
+        "endLine": 353,
+        "endChar": 46
+      },
+      "revId": "91050cba5e3b36d585a23cda9ce3627e4f0a92b8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
