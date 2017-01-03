@@ -101,7 +101,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := cyanogenmod_hammerhead_defconfig
+TARGET_KERNEL_CONFIG := lineageos_hammerhead_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
 
 ifneq ($(filter hammerhead_fp aosp_hammerhead_fp,$(TARGET_PRODUCT)),)
