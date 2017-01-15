@@ -110,7 +110,6 @@ vendor/firmware/adsp.b12
 vendor/firmware/adsp.mdt
 vendor/firmware/bcm2079x-b5_firmware.ncd
 vendor/firmware/bcm2079x-b5_pre_firmware.ncd
-vendor/firmware/bcm4335c0.hcd
 vendor/firmware/bu24205_LGIT_VER_2_DATA1.bin
 vendor/firmware/bu24205_LGIT_VER_2_DATA2.bin
 vendor/firmware/bu24205_LGIT_VER_2_DATA3.bin
