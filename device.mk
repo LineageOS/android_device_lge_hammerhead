@@ -181,18 +181,8 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libloc_adapter \
-    libloc_eng \
-    libloc_api_v02 \
-    libloc_ds_api \
-    libloc_core \
-    libizat_core \
-    libgeofence \
     libgps.utils \
-    gps.msm8974 \
-    flp.msm8974 \
-    liblbs_core \
-    flp.conf
+    gps.msm8974
 
 # NFC packages
 PRODUCT_PACKAGES += \
