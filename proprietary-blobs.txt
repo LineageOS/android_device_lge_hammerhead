@@ -59,7 +59,6 @@ etc/sensor_def_hh.conf
 framework/qcrilhook.jar
 framework/serviceitems.jar
 lib/hw/flp.msm8974.so
-lib/hw/gps.msm8974.so
 lib/libadsprpc.so
 lib/libchromatix_imx179_common.so
 lib/libchromatix_imx179_default_video.so
@@ -72,10 +71,7 @@ lib/libchromatix_mt9m114b_snapshot.so
 lib/libdrmdiag.so
 lib/libdrmfs.so
 lib/libdrmtime.so
-lib/libgps.utils.so
 lib/libI420colorconvert.so
-lib/libloc_core.so
-lib/libloc_eng.so
 lib/libmm-abl.so
 lib/libmmcamera_hdr_lib.so
 lib/libmmcamera_image_stab.so
