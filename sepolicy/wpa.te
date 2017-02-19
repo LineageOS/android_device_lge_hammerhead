@@ -1,3 +1,0 @@
-# Reading from /persist/wifi/.macaddr
-allow wpa persist_file:dir r_dir_perms;
-r_dir_file(wpa, persist_wifi_file)
