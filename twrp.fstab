@@ -1,0 +1,18 @@
+/system      ext4    /dev/block/platform/msm_sdcc.1/by-name/system
+/data        ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/metadata
+/cache       ext4    /dev/block/platform/msm_sdcc.1/by-name/cache
+/persist     ext4    /dev/block/platform/msm_sdcc.1/by-name/persist     flags=display=Persist
+/firmware    vfat    /dev/block/platform/msm_sdcc.1/by-name/modem       flags=display=Firmware
+/boot        emmc    /dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery    emmc    /dev/block/platform/msm_sdcc.1/by-name/recovery
+/misc        emmc    /dev/block/platform/msm_sdcc.1/by-name/misc
+/radio       emmc    /dev/block/platform/msm_sdcc.1/by-name/modem
+/sbl1        emmc    /dev/block/platform/msm_sdcc.1/by-name/sbl1
+/tz          emmc    /dev/block/platform/msm_sdcc.1/by-name/tz
+/rpm         emmc    /dev/block/platform/msm_sdcc.1/by-name/rpm
+/sdi         emmc    /dev/block/platform/msm_sdcc.1/by-name/sdi
+/aboot       emmc    /dev/block/platform/msm_sdcc.1/by-name/aboot
+/imgdata     emmc    /dev/block/platform/msm_sdcc.1/by-name/imgdata
+/usb-otg     vfat    /dev/block/sda1    /dev/block/sda                  flags=removable;storage;display=USB-OTG
+/efs1        emmc    /dev/block/platform/msm_sdcc.1/by-name/modemst1    flags=backup=1;display=EFS
+/efs2        emmc    /dev/block/platform/msm_sdcc.1/by-name/modemst2    flags=backup=1;subpartitionof=/efs1

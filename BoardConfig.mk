@@ -111,6 +111,11 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)/recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Recovery: TWRP support
+ifeq ($(WITH_TWRP),true)
+-include device/lge/hammerhead/twrp.mk
+endif
+
 # SELinux; the list below is order dependent
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
