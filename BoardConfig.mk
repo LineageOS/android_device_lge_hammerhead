@@ -156,6 +156,11 @@ RECOVERY_FSTAB_VERSION := 2
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
+# Recovery: TWRP support
+ifeq ($(WITH_TWRP),true)
+-include device/lge/hammerhead/twrp.mk
+endif
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
 
 # Enable Minikin text layout engine (will be the default soon)
