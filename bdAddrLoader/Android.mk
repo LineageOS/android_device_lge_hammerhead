@@ -1,5 +1,4 @@
-#
-# Copyright 2013 The Android Open Source Project
+# Copyright (C) 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := addrloader.c
-LOCAL_SHARED_LIBRARIES := libcutils liblog
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := lge
 LOCAL_MODULE := bdAddrLoader
+LOCAL_MODULE_OWNER := lge
+LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := libcutils liblog
+LOCAL_SRC_FILES := addrloader.c
 include $(BUILD_EXECUTABLE)
