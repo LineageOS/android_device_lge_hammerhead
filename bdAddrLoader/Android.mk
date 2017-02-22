@@ -17,9 +17,9 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := addrloader.c
-LOCAL_SHARED_LIBRARIES := libcutils liblog
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := lge
 LOCAL_MODULE := bdAddrLoader
+LOCAL_MODULE_OWNER := lge
+LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := libcutils liblog
+LOCAL_SRC_FILES := addrloader.c
 include $(BUILD_EXECUTABLE)
