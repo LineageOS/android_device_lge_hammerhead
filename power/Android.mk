@@ -17,9 +17,9 @@
 LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_SRC_FILES := power_hammerhead.c
-LOCAL_SHARED_LIBRARIES := liblog libcutils
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := power.hammerhead
+LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_SRC_FILES := power_hammerhead.c
 include $(BUILD_SHARED_LIBRARY)
