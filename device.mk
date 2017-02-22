@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The Android Open-Source Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,52 +14,131 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL hammerhead devices, and
-# are also specific to hammerhead devices
-#
-# Everything in this directory will become public
-
-
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead.rc:root/init.hammerhead.rc \
-    device/lge/hammerhead/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
-    device/lge/hammerhead/fstab.hammerhead:root/fstab.hammerhead \
-    device/lge/hammerhead/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
-
-# Input device files for hammerhead
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    device/lge/hammerhead/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
-    device/lge/hammerhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl \
-    device/lge/hammerhead/qpnp_pon.kcm:system/usr/keychars/qpnp_pon.kcm \
-    device/lge/hammerhead/Button_Jack.kl:system/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl \
-    device/lge/hammerhead/Button_Jack.kcm:system/usr/keychars/msm8974-taiko-mtp-snd-card_Button_Jack.kcm \
-    device/lge/hammerhead/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
-    device/lge/hammerhead/hs_detect.kcm:system/usr/keychars/hs_detect.kcm
-
-# Prebuilt input device calibration files
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/touch_dev.idc:system/usr/idc/touch_dev.idc
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.primary.msm8974 \
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudio-resampler \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors \
+    tinymix
 
 PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/lge/hammerhead/audio_policy.conf:system/etc/audio_policy.conf \
     device/lge/hammerhead/mixer_paths.xml:system/etc/mixer_paths.xml
 
-PRODUCT_COPY_FILES += \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    device/lge/hammerhead/media_codecs.xml:system/etc/media_codecs.xml \
-    device/lge/hammerhead/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/lge/hammerhead/media_profiles.xml:system/etc/media_profiles.xml
-
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+# Bluetooth
+PRODUCT_PACKAGES += \
+    bdAddrLoader
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/bluetooth/BCM4339_003.001.009.0079.0339.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm4335c0.hcd
 
-# These are the hardware-specific features
+# Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.hammerhead \
+    libmmcamera_interface \
+    libmmjpeg_interface \
+    libqomx_core \
+    mm-jpeg-interface-test \
+    mm-qcamera-app \
+    Snap
+
+# Dalvik/HWUI
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
+# Display
+PRODUCT_PACKAGES += \
+    gralloc.msm8974 \
+    hwcomposer.msm8974 \
+    libgenlock \
+    libqdMetaData \
+    libqdutils \
+    memtrack.msm8974
+
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8974 \
+    libgps.utils
+
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/gps.conf:system/etc/gps.conf
+
+# IPC router config
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/sec_config:system/etc/sec_config
+
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/Button_Jack.kcm:system/usr/keychars/msm8974-taiko-mtp-snd-card_Button_Jack.kcm \
+    device/lge/hammerhead/Button_Jack.kl:system/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl \
+    device/lge/hammerhead/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
+    device/lge/hammerhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/lge/hammerhead/hs_detect.kcm:system/usr/keychars/hs_detect.kcm \
+    device/lge/hammerhead/hs_detect.kl:system/usr/keylayout/hs_detect.kl \
+    device/lge/hammerhead/qpnp_pon.kcm:system/usr/keychars/qpnp_pon.kcm \
+    device/lge/hammerhead/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
+
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8974
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.hammerhead
+
+# Media
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/lge/hammerhead/media_codecs.xml:system/etc/media_codecs.xml \
+    device/lge/hammerhead/media_profiles.xml:system/etc/media_profiles.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
+
+# Misc
+PRODUCT_CHARACTERISTICS := nosdcard
+
+# NFC
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/nfc/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf \
+    device/lge/hammerhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
+
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc \
+    libstagefrighthw
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS := \
+    device/lge/hammerhead/overlay
+
+# Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -85,28 +164,22 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
-# For GPS
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/sec_config:system/etc/sec_config
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8974
 
-# NFC access control + feature files + configuration
+# Ramdisk
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml \
-    device/lge/hammerhead/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/lge/hammerhead/nfc/libnfc-brcm-20791b05.conf:system/etc/libnfc-brcm-20791b05.conf
+    device/lge/hammerhead/init.hammerhead.rc:root/init.hammerhead.rc \
+    device/lge/hammerhead/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
+    device/lge/hammerhead/fstab.hammerhead:root/fstab.hammerhead \
+    device/lge/hammerhead/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
 
+# Thermal
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
 
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_CHARACTERISTICS := nosdcard
-
-DEVICE_PACKAGE_OVERLAYS := \
-    device/lge/hammerhead/overlay
-
+# Wifi
 PRODUCT_PACKAGES := \
     libwpa_client \
     hostapd \
@@ -114,75 +187,67 @@ PRODUCT_PACKAGES := \
     wpa_supplicant \
     wpa_supplicant.conf
 
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
+
+
+
+
+
+
+
+
+# Prebuilt input device calibration files
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/touch_dev.idc:system/usr/idc/touch_dev.idc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     librs_jni
 
-PRODUCT_PACKAGES += \
-    gralloc.msm8974 \
-    libgenlock \
-    hwcomposer.msm8974 \
-    memtrack.msm8974 \
-    libqdutils \
-    libqdMetaData
-
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libstagefrighthw \
-    libOmxCore \
-    libmm-omxcore \
-    libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc
-
-PRODUCT_PACKAGES += \
-    audio.primary.msm8974 \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libaudio-resampler \
-    tinymix
-
-# Audio effects
-PRODUCT_PACKAGES += \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    libqcompostprocbundle
-
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 
-# Camera
-PRODUCT_PACKAGES += \
-    libqomx_core \
-    libmmcamera_interface \
-    libmmjpeg_interface \
-    camera.hammerhead \
-    mm-jpeg-interface-test \
-    mm-qcamera-app \
-    Snap
 
-PRODUCT_PACKAGES += \
-    keystore.msm8974
 
-PRODUCT_PACKAGES += \
-    power.msm8974
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
-# GPS configuration
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/gps.conf:system/etc/gps.conf
 
-# GPS
-PRODUCT_PACKAGES += \
-    libgps.utils \
-    gps.msm8974
+
+
+
+
+
+
+
+
+
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -193,8 +258,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libion
 
-PRODUCT_PACKAGES += \
-    lights.hammerhead
+
 
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -203,8 +267,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
-PRODUCT_PACKAGES += \
-    bdAddrLoader
+
 
 PRODUCT_PACKAGES += \
     power.hammerhead
@@ -217,19 +280,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.texture_cache_size=72 \
-    ro.hwui.layer_cache_size=48 \
-    ro.hwui.r_buffer_cache_size=8 \
-    ro.hwui.path_cache_size=32 \
-    ro.hwui.gradient_cache_size=1 \
-    ro.hwui.drop_shadow_cache_size=6 \
-    ro.hwui.texture_cache_flushrate=0.4 \
-    ro.hwui.text_small_cache_width=1024 \
-    ro.hwui.text_small_cache_height=1024 \
-    ro.hwui.text_large_cache_width=2048 \
-    ro.hwui.text_large_cache_height=1024
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
@@ -366,21 +416,8 @@ PRODUCT_COPY_FILES += \
     device/lge/hammerhead/init.hammerhead.diag.rc.user:root/init.hammerhead.diag.rc
 endif
 
-ifneq ($(filter hammerhead_fp aosp_hammerhead_fp,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead_fp.rc:root/init.hammerhead_fp.rc \
-    hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/fw_bcmdhd_fp.bin:system/vendor/firmware/fw_bcmdhd.bin \
-    hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
 
-PRODUCT_COPY_FILES += \
-    hardware/broadcom/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    hardware/broadcom/wlan/bcmdhd/config/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
-else
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
-endif
 
-# setup dalvik vm configs.
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/qcom/gpu/msm8x74/msm8x74-gpu-vendor.mk)
