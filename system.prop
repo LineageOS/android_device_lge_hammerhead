@@ -1,0 +1,81 @@
+# Audio/Voice
+af.fast_track_multiplier=1
+media.aac_51_output_enabled=true
+persist.audio.dualmic.config=endfire
+persist.audio.fluence.speaker=false
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicecomm=true
+persist.audio.fluence.voicerec=false
+persist.audio.handset.mic.type=digital
+ro.config.vc_call_vol_steps=6
+
+# Camera
+camera.disable_zsl_mode=1
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
+# Dalvik/VM
+dalvik.vm.dex2oat-swap=false
+
+# Display
+persist.hwc.mdpcomp.enable=true
+
+# Graphics
+ro.opengles.version=196608
+ro.sf.lcd_density=480
+
+# Input
+ro.input.noresample=1
+
+# Net
+net.tethering.noprovisioning=true
+
+# QCOM
+drm.service.enabled=true
+
+# Radio/RIL/Telephony
+persist.radio.always_send_plmn=true
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.custom_ecc=1
+persist.radio.data_no_toggle=1
+persist.radio.mode_pref_nv10=1
+persist.radio.snapshot_enabled=1
+persist.radio.snapshot_timer=2
+persist.radio.use_cc_names=true
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+ro.ril.force_eri_from_xml=true
+ro.telephony.call_ring.multiple=0
+ro.telephony.default_network=10
+telephony.lteOnCdmaDevice=1
+
+# Sensors
+debug.qualcomm.sns.daemon=w
+debug.qualcomm.sns.libsensor1=w
+persist.debug.sensors.hal=w
+ro.qti.sdk.sensors.gestures=false
+ro.qti.sensors.amd=false
+ro.qti.sensors.facing=false
+ro.qti.sensors.game_rv=true
+ro.qti.sensors.georv=true
+ro.qti.sensors.max_accel_rate=200
+ro.qti.sensors.max_gamerv_rate=200
+ro.qti.sensors.max_geomag_rotv=60
+ro.qti.sensors.max_grav=200
+ro.qti.sensors.max_gyro_rate=200
+ro.qti.sensors.max_linacc=200
+ro.qti.sensors.max_orient=200
+ro.qti.sensors.max_rotvec=200
+ro.qti.sensors.pam=false
+ro.qti.sensors.pedometer=false
+ro.qti.sensors.rmd=false
+ro.qti.sensors.smd=true
+ro.qti.sensors.smgr_mag_cal_en=true
+ro.qti.sensors.step_counter=true
+ro.qti.sensors.step_detector=true
+ro.qti.sensors.tap=false
+ro.qti.sensors.tilt=false
+ro.qti.sensors.vmd=false
+
+# WiFi
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=15

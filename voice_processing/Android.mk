@@ -1,4 +1,4 @@
-# Copyright 2013 The Android Open Source Project
+# Copyright (C) 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,24 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter hammerhead, $(TARGET_DEVICE)),)
-
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := \
-	voice_processing_descriptors.c
-
 LOCAL_C_INCLUDES += \
 	$(call include-path-for, audio-effects)
-
 LOCAL_MODULE := libqcomvoiceprocessingdescriptors
-
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/soundfx
-
 LOCAL_MODULE_TAGS := optional
-
+LOCAL_SRC_FILES := \
+	voice_processing_descriptors.c
 include $(BUILD_SHARED_LIBRARY)
-
-endif
