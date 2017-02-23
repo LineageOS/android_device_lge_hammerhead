@@ -72,6 +72,8 @@ TARGET_NO_RPC := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 TARGET_USES_ION := true
+TARGET_USES_HWC2 := true
+TARGET_USES_HWC2ON1ADAPTER := true
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
