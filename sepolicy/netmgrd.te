@@ -27,6 +27,7 @@ allow netmgrd shell_exec:file rx_file_perms;
 
 # Runs /system/bin/ip addr flush dev <device> commands.
 allow netmgrd system_file:file rx_file_perms;
+allow netmgrd vendor_file_type:file rx_file_perms;
 
 # XXX Run toolbox.  Might not be needed.
 allow netmgrd toolbox_exec:file rx_file_perms;
