@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a51691d_9a30fde9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2017-04-07T13:58:38Z",
+      "side": 1,
+      "message": "partially reverts ;-) I think the __unused flag doesn\u0027t need to come back",
+      "range": {
+        "startLine": 12,
+        "startChar": 5,
+        "endLine": 12,
+        "endChar": 12
+      },
+      "revId": "f75d1c977464007c3c61377bf2bec50e31b444ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a51691d_1a252dab",
         "filename": "power/power_hammerhead.c",
         "patchSetId": 3
@@ -13,6 +36,30 @@
       "writtenOn": "2017-04-07T13:36:19Z",
       "side": 1,
       "message": "no?",
+      "range": {
+        "startLine": 342,
+        "startChar": 41,
+        "endLine": 342,
+        "endChar": 64
+      },
+      "revId": "f75d1c977464007c3c61377bf2bec50e31b444ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a51691d_ba33b9f5",
+        "filename": "power/power_hammerhead.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2017-04-07T13:58:38Z",
+      "side": 1,
+      "message": "Yeah, it\u0027s always been used actually",
+      "parentUuid": "7a51691d_1a252dab",
       "range": {
         "startLine": 342,
         "startChar": 41,
