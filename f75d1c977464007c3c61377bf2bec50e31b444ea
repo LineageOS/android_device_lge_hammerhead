@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a51691d_1a252dab",
+        "filename": "power/power_hammerhead.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2017-04-07T13:36:19Z",
+      "side": 1,
+      "message": "no?",
+      "range": {
+        "startLine": 342,
+        "startChar": 41,
+        "endLine": 342,
+        "endChar": 64
+      },
+      "revId": "f75d1c977464007c3c61377bf2bec50e31b444ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
