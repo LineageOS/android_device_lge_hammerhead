@@ -16,6 +16,8 @@
 
 set -e
 
+INITIAL_COPYRIGHT_YEAR=2013
+
 VENDOR=lge
 DEVICE=hammerhead
 
