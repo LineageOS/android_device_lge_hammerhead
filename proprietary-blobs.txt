@@ -166,6 +166,7 @@ vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libDxHdcp.so
 vendor/lib/libFuzzmmstillomxenc.so
+vendor/lib/libfrsdk.so|bc4c77b62f30daabac984d4f7deb65e6c260da85
 vendor/lib/libgeofence.so
 vendor/lib/libgsl.so
 vendor/lib/libidl.so
