@@ -36,6 +36,8 @@ allow thermald sysfs_devices_system_cpu:file rw_file_perms;
 # /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
 allow thermald sysfs:file write;
 
+r_dir_file(thermald, sysfs_leds)
+
 # Create and access to /dev/socket/thermal-.*
 type_transition thermald socket_device:sock_file thermald_socket;
 allow thermald socket_device:dir w_dir_perms;
