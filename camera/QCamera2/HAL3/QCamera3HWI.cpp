@@ -4086,7 +4086,8 @@ int QCamera3HardwareInterface::initStaticMetadata(int cameraId)
        ANDROID_STATISTICS_HISTOGRAM_MODE, ANDROID_STATISTICS_SHARPNESS_MAP_MODE,
        ANDROID_STATISTICS_LENS_SHADING_MAP_MODE, ANDROID_TONEMAP_CURVE_BLUE,
        ANDROID_TONEMAP_CURVE_GREEN, ANDROID_TONEMAP_CURVE_RED, ANDROID_TONEMAP_MODE,
-       ANDROID_BLACK_LEVEL_LOCK };
+       ANDROID_BLACK_LEVEL_LOCK, QCAMERA3_PRIVATEDATA_REPROCESS,
+       };
 
     size_t request_keys_cnt =
             sizeof(request_keys_basic)/sizeof(request_keys_basic[0]);
@@ -4129,7 +4130,9 @@ int QCamera3HardwareInterface::initStaticMetadata(int cameraId)
        ANDROID_STATISTICS_FACE_LANDMARKS, ANDROID_STATISTICS_FACE_RECTANGLES,
        ANDROID_STATISTICS_FACE_SCORES,
        ANDROID_SENSOR_NOISE_PROFILE,
-       ANDROID_SENSOR_GREEN_SPLIT};
+       ANDROID_SENSOR_GREEN_SPLIT,
+       QCAMERA3_PRIVATEDATA_REPROCESS,
+       };
     size_t result_keys_cnt =
             sizeof(result_keys_basic)/sizeof(result_keys_basic[0]);
     //NOTE: Please increase available_result_keys array size before
@@ -4201,10 +4204,9 @@ int QCamera3HardwareInterface::initStaticMetadata(int cameraId)
        ANDROID_CONTROL_AWB_LOCK_AVAILABLE,
        ANDROID_STATISTICS_INFO_AVAILABLE_LENS_SHADING_MAP_MODES,
        ANDROID_SHADING_AVAILABLE_MODES,
-       ANDROID_INFO_SUPPORTED_HARDWARE_LEVEL };
-    staticInfo.update(ANDROID_REQUEST_AVAILABLE_CHARACTERISTICS_KEYS,
-                      available_characteristics_keys,
-                      sizeof(available_characteristics_keys)/sizeof(int32_t));
+       ANDROID_INFO_SUPPORTED_HARDWARE_LEVEL,
+       QCAMERA3_OPAQUE_RAW_FORMAT, QCAMERA3_OPAQUE_RAW_STRIDES
+       };
 
     /*available stall durations depend on the hw + sw and will be different for different devices */
     /*have to add for raw after implementation*/
@@ -4290,6 +4292,10 @@ int QCamera3HardwareInterface::initStaticMetadata(int cameraId)
     }
     staticInfo.update(QCAMERA3_OPAQUE_RAW_STRIDES, strides,
             3*gCamCapability[cameraId]->supported_raw_dim_cnt);
+
+    staticInfo.update(ANDROID_REQUEST_AVAILABLE_CHARACTERISTICS_KEYS,
+                      available_characteristics_keys,
+                      sizeof(available_characteristics_keys)/sizeof(int32_t));
 
     gStaticMetadata[cameraId] = staticInfo.release();
     return rc;
