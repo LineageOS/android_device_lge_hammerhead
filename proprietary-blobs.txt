@@ -139,7 +139,6 @@ vendor/firmware/widevine.b01
 vendor/firmware/widevine.b02
 vendor/firmware/widevine.b03
 vendor/firmware/widevine.mdt
-vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -161,7 +160,6 @@ vendor/lib/libCB.so
 vendor/lib/libCommandSvc.so
 vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
-vendor/lib/libdrmdecrypt.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libDxHdcp.so
@@ -227,11 +225,7 @@ vendor/lib/libvss_common_iface.so
 vendor/lib/libvss_nv_core.so
 vendor/lib/libvss_nv_idl.so
 vendor/lib/libvss_nv_iface.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVphoneAPI.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
