@@ -391,18 +391,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-swap=false
 
-# Modem debugger
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-PRODUCT_PACKAGES += \
-    QXDMLogger
-
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead.diag.rc.userdebug:root/init.hammerhead.diag.rc
-else
-PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead.diag.rc.user:root/init.hammerhead.diag.rc
-endif
-
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
