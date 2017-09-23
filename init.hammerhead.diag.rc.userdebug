@@ -1,6 +1,0 @@
-# This file gets copied as /init.hammerhead.diag.rc
-
-on boot
-    # Modem logging collection
-    mkdir /data/diag_logs 0777 system system
-    chmod 666 /dev/diag
