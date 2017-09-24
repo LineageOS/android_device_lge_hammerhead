@@ -69,9 +69,6 @@ on boot
     # Allow QMUX daemon to assign port open wait time
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
 
-    #For bridgemgr daemon to inform the USB driver of the correct transport
-    chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
-
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
     # Increased technology maximums should be reflected here.
     write /proc/sys/net/core/rmem_max  2097152
@@ -269,12 +266,6 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group system wakelock
-
-service bridgemgrd /system/bin/bridgemgrd
-    class main
-    user radio
-    group radio
-    disabled
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
