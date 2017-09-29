@@ -149,6 +149,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.media.treble_omx=false
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
     audio.primary.msm8974 \
     audio.a2dp.default \
     audio.usb.default \
@@ -158,6 +159,7 @@ PRODUCT_PACKAGES += \
 
 # Audio effects
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@2.0-impl \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
@@ -178,10 +180,16 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
     keystore.msm8974
 
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.msm8974
+
+# Thermal HAL
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
@@ -194,14 +202,20 @@ PRODUCT_PACKAGES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     nfc_nci.bcm2079x.default \
     NfcNci \
     Tag
+
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 PRODUCT_PACKAGES += \
     libion
 
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.hammerhead
 
 PRODUCT_PACKAGES += \
@@ -242,6 +256,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
 
 # Set sensor streaming rate
 PRODUCT_PROPERTY_OVERRIDES += \
