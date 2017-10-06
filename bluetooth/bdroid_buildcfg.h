@@ -24,4 +24,9 @@
 
 /* Defined if the kernel does not have support for CLOCK_BOOTTIME_ALARM */
 #define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
+
+/* The following is needed, to allow car handsfree setup to work (BMW and Mercedes),
+ * see change 177996 and BUGBASH-308*/
+#define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
+#define BTIF_HF_WBS_PREFERRED TRUE  /* Use WBS    */
 #endif
