@@ -27,6 +27,6 @@
 
 /* The following is needed, to allow car handsfree setup to work (BMW and Mercedes),
  * see change 177996 and BUGBASH-308*/
-#define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
-#define BTIF_HF_WBS_PREFERRED TRUE  /* Use WBS    */
+#define BTM_WBS_INCLUDED TRUE       /* Enable WBS - needed so that connection is possible */
+#define BTIF_HF_WBS_PREFERRED FALSE  /* TRUE would result in muted calls on both ends. */
 #endif
