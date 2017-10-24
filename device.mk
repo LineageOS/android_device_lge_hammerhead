@@ -51,7 +51,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/lge/hammerhead/media_codecs.xml:system/etc/media_codecs.xml \
     device/lge/hammerhead/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/lge/hammerhead/media_profiles.xml:system/etc/media_profiles.xml
+    device/lge/hammerhead/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
@@ -148,10 +148,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVdecHevc \
     libOmxVenc
-
-# Default OMX service to non-Treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
