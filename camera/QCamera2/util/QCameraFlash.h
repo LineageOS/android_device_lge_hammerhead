@@ -44,6 +44,8 @@ public:
 
     int32_t registerCallbacks(const camera_module_callbacks_t* callbacks);
     int32_t initFlash(const int camera_id);
+    static void getFlashNode(const int camera_id,
+            char (&flashNode)[QCAMERA_MAX_FILEPATH_LENGTH]);
     int32_t setFlashMode(const int camera_id, const bool on);
     int32_t deinitFlash(const int camera_id);
     int32_t reserveFlashForCamera(const int camera_id);
