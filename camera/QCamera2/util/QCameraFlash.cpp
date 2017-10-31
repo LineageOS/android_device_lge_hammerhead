@@ -148,6 +148,10 @@ int32_t QCameraFlash::initFlash(const int camera_id)
             hasFlash,
             flashNode);
 
+    if (hasFlash && !*flashNode) {
+        getFlashNode(camera_id, flashNode);
+    }
+
     strlcat(flashPath,
             flashNode,
             sizeof(flashPath));
@@ -191,6 +195,56 @@ int32_t QCameraFlash::initFlash(const int camera_id)
     }
 
     return retVal;
+}
+
+/*===========================================================================
+ * FUNCTION   : getFlashNode
+ *
+ * DESCRIPTION: Retrieve a camera's flash node via V4L2 subdevice enumeration.
+ *
+ * PARAMETERS :
+ *   @camera_id  : Camera id of the flash
+ *   @flashNode  : Flash subdevice node
+ *
+ * RETURN     :
+ *   None
+ *==========================================================================*/
+void QCameraFlash::getFlashNode(const int camera_id,
+        char (&flashNode)[QCAMERA_MAX_FILEPATH_LENGTH])
+{
+    int dev_fd = 0;
+    char dev_name[32];
+    int32_t num_entities = 1;
+
+    flashNode[0] = '\0';
+
+    snprintf(dev_name, sizeof(dev_name), "/dev/media%d", camera_id);
+    dev_fd = open(dev_name, O_RDWR | O_NONBLOCK);
+    if (dev_fd < 0) {
+        ALOGE("Can't open /dev/media%d\n", camera_id);
+        goto close_fd;
+    }
+
+    while (1) {
+        struct media_entity_desc entity;
+        memset(&entity, 0, sizeof(entity));
+        entity.id = num_entities++;
+        if (ioctl(dev_fd, MEDIA_IOC_ENUM_ENTITIES, &entity) < 0) {
+            CDBG("Done enumerating /dev/media%d entities\n", camera_id);
+            break;
+        }
+        if(entity.type == MEDIA_ENT_T_V4L2_SUBDEV &&
+           entity.group_id == MSM_CAMERA_SUBDEV_LED_FLASH) {
+            strlcpy(flashNode, entity.name, QCAMERA_MAX_FILEPATH_LENGTH);
+            ALOGI("%s: cameraId=%d, flashNode='%s']\n", __func__,
+                  camera_id, flashNode);
+            break;
+        }
+    }
+
+close_fd:
+    close(dev_fd);
+    dev_fd = -1;
 }
 
 /*===========================================================================
