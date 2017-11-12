@@ -32,6 +32,7 @@ allow camera persist_file:dir search;
 r_dir_file(camera, persist_camera_file)
 
 allow camera system_file:file execmod;
+allow camera vendor_file:file execmod;
 allow camera cameraserver:fd { use };
 
 # Interact with ion
