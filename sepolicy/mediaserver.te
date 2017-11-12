@@ -12,6 +12,7 @@ allow mediaserver camera_device:chr_file rw_file_perms;
 allow mediaserver audio_device:chr_file rw_file_perms;
 
 allow mediaserver system_file:file execmod;
+allow mediaserver vendor_file:file execmod;
 
 # Permit HDCP negotiations for wifi display / casting
 allow mediaserver tee_device:chr_file rw_file_perms;
