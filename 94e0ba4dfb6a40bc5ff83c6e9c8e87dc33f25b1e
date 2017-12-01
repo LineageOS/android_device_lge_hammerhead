@@ -16,6 +16,24 @@
       "revId": "94e0ba4dfb6a40bc5ff83c6e9c8e87dc33f25b1e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f959adb_967059b1",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2017-12-01T13:43:43Z",
+      "side": 1,
+      "message": "Indeed, forgot that Lineage fixes this HAL differently. I wonder if https://review.lineageos.org/#/c/196420 is affected in any way.",
+      "parentUuid": "150446ff_581c686a",
+      "revId": "94e0ba4dfb6a40bc5ff83c6e9c8e87dc33f25b1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
