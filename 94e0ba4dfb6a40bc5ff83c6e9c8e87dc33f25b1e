@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "150446ff_581c686a",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2017-12-01T06:41:48Z",
+      "side": 1,
+      "message": "I think you need to use android.hardware.nfc@1.0-impl-bcm for hammerhead.",
+      "revId": "94e0ba4dfb6a40bc5ff83c6e9c8e87dc33f25b1e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
