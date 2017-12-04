@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "734164c5_bdd4778f",
+        "filename": "gps.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2017-12-04T06:41:20Z",
+      "side": 1,
+      "message": "Why do we want more logspam?",
+      "revId": "06481f259755746c467608ed9c952fbc565741c0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
