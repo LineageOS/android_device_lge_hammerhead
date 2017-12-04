@@ -16,6 +16,24 @@
       "revId": "06481f259755746c467608ed9c952fbc565741c0",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c9e84e8_15ff54bd",
+        "filename": "gps.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2017-12-04T08:11:47Z",
+      "side": 1,
+      "message": "I adapted it from angler/bullhead changes (i.e., https://android.googlesource.com/device/lge/bullhead/+/5fee886b8). There were reports of flaky GPS lock during initial AOSP porting, and those upstream devices chose to keep it.\n\nWe can certainly abandon it, if that\u0027s the consensus here.",
+      "parentUuid": "734164c5_bdd4778f",
+      "revId": "06481f259755746c467608ed9c952fbc565741c0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
