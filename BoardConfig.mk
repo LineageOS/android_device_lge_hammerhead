@@ -120,8 +120,4 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
 
-# Hardware
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
-
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
