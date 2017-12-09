@@ -49,5 +49,10 @@
     <!-- Doze: pulse parameter - delay to wait for the screen to wake up after an intent -->
     <integer name="doze_pulse_delay_in_intent">0</integer>
 
+    <!-- If true, enable the advance anti-falsing classifier on the lockscreen. On some devices it
+         does not work well, particularly with noisy touchscreens. Note that disabling it may
+         increase the rate of unintentional unlocks. -->
+    <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
+
 </resources>
 
