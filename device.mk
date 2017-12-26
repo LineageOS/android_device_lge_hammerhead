@@ -213,6 +213,10 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl-bcm \
     android.hardware.nfc@1.0-service
 
+# Power HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.power@1.0-impl
+
 PRODUCT_PACKAGES += \
     libion
 
@@ -241,6 +245,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true
 
+# Lights HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.light@2.0-impl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false \
     ro.hwui.texture_cache_size=72 \
@@ -257,6 +265,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
+
+# DRM HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.drm@1.0-impl
 
 # Set sensor streaming rate
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -309,6 +321,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
 
+# Sensors HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.sensors@1.0-impl
+
 # LTE, CDMA, GSM/WCDMA
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.force_eri_from_xml=true \
@@ -360,6 +376,22 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Allow tethering without provisioning app
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
+
+# RenderScript HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.renderscript@1.0-impl
+
+# Thermal HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.thermal@1.0-impl
+
+# Usb HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.usb@1.0-service
+
+# Vibrator HAL interfaces
+PRODUCT_PACKAGES += \
+		android.hardware.vibrator@1.0-impl
 
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
