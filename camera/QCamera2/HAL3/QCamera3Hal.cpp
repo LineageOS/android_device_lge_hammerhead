@@ -32,7 +32,7 @@
 
 static hw_module_t camera_common = {
     .tag = HARDWARE_MODULE_TAG,
-    .module_api_version = CAMERA_MODULE_API_VERSION_2_4,
+    .module_api_version = CAMERA_MODULE_API_VERSION_2_3,
     .hal_api_version = HARDWARE_HAL_API_VERSION,
     .id = CAMERA_HARDWARE_MODULE_ID,
     .name = "QCamera Module",
