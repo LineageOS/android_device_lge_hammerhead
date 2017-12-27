@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f020d9fa_d403f752",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 16082
+      },
+      "writtenOn": "2017-12-27T09:10:33Z",
+      "side": 1,
+      "message": "Use a blank line between the \u0027title\u0027 and \u0027message\u0027",
+      "revId": "3db7bc0516c274cdced94cda770951761a8c4a58",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
