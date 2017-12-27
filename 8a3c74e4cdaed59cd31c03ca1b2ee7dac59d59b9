@@ -22,6 +22,29 @@
       "revId": "8a3c74e4cdaed59cd31c03ca1b2ee7dac59d59b9",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "787c83c4_8142c382",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-12-27T10:36:18Z",
+      "side": 1,
+      "message": "Kang\u0027ing so bad that this doesn\u0027t even exist.",
+      "range": {
+        "startLine": 113,
+        "startChar": 22,
+        "endLine": 113,
+        "endChar": 36
+      },
+      "revId": "8a3c74e4cdaed59cd31c03ca1b2ee7dac59d59b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
