@@ -72,7 +72,7 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
 TARGET_USES_ION := true
 
-# legacy f_adb kernel drivers 
+# legacy f_adb kernel drivers
 TARGET_USES_LEGACY_ADB_INTERFACE := true
 
 # Enable dex-preoptimization to speed up first boot sequence
@@ -110,6 +110,7 @@ BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 BOARD_SEPOLICY_DIRS += device/lge/hammerhead/sepolicy
 
 DEVICE_MANIFEST_FILE := device/lge/hammerhead/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
