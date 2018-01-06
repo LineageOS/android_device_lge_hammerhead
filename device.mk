@@ -149,10 +149,6 @@ PRODUCT_PACKAGES += \
     libOmxVdecHevc \
     libOmxVenc
 
-# Default OMX service to non-Treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
-
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     audio.primary.msm8974 \
