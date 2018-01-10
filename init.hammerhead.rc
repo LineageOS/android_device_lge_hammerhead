@@ -365,6 +365,7 @@ service vss_init /vendor/bin/vss_init
     disabled
 
 service time_daemon /system/bin/time_daemon
+    capabilities SYS_TIME
     class late_start
-    user root
-    group root
+    user system
+    group net_raw
