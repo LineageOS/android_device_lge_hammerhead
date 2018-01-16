@@ -10,7 +10,7 @@
     <ctl name="Voice Rx Gain" id="0" value="0" />
     <ctl name="Voice Rx Gain" id="1" value="-1" />
     <ctl name="Voice Rx Gain" id="2" value="20" />
-    <ctl name="TTY Mode" value="Off" />
+    <ctl name="TTY Mode" value="OFF" />
     <ctl name="LINEOUT1 Volume" value="12" />
     <ctl name="LINEOUT2 Volume" value="12" />
     <ctl name="LINEOUT3 Volume" value="12" />
