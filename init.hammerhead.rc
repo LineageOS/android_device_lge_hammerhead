@@ -231,6 +231,11 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 0
     start mpdecision
 
+on zygote-start
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+
 on property:sys.boot_completed=1
     # Enable Power modes
     write /sys/module/lpm_resources/enable_low_power/l2 2
@@ -297,7 +302,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
     oneshot
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
-    -puse_p2p_group_interface=1 \
+    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
     -g@android:wpa_wlan0
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
