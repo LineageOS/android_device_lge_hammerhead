@@ -10,6 +10,7 @@ allow camera video_device:dir search;
 allow camera { gpu_device video_device }:chr_file rw_file_perms;
 allow camera { surfaceflinger mediaserver }:fd use;
 allow camera { hal_camera_default mediacodec }:fd use;
+allow camera { untrusted_app_all priv_app }:fd use;
 
 # Create front and back camera sockets (/data/cam_socket[12])
 type_transition camera system_data_file:sock_file camera_socket "cam_socket1";
