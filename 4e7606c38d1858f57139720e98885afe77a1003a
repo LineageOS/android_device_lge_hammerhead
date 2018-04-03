@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e9f9aeae_8dd1c7b1",
+        "filename": "lineage.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 5259
+      },
+      "writtenOn": "2018-04-03T14:26:59Z",
+      "side": 1,
+      "message": "Should be:\nBUILD_FINGERPRINT :\u003d google/hammerhead/hammerhead:6.0.1/M4B30Z/3437181:user/release-keys\n\nI think you had it right in PS1",
+      "revId": "4e7606c38d1858f57139720e98885afe77a1003a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
