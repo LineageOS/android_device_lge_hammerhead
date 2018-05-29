@@ -335,9 +335,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    camera.disable_zsl_mode=1 \
-    media.stagefright.legacyencoder=true \
-    media.stagefright.less-secure=true
+    camera.disable_zsl_mode=1
 
 # Input resampling configuration
 PRODUCT_PROPERTY_OVERRIDES += \
