@@ -1,0 +1,2 @@
+# Avoid a sys_module denial, despite CONFIG_MODULES=n
+dontaudit netd self:capability sys_module;
