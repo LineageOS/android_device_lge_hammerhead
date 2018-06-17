@@ -1,1 +1,5 @@
 allowxperm priv_app self:udp_socket ioctl { SIOCGIWESSID };
+
+# Clean up logspam
+dontaudit priv_app device:dir r_dir_perms;
+dontaudit priv_app proc_interrupts:file r_file_perms;
