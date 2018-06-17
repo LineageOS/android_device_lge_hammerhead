@@ -38,6 +38,9 @@ allow thermald sysfs:file write;
 
 r_dir_file(thermald, sysfs_leds)
 
+# /devices/soc0/{hw_platform,soc_id} (thermal-engine-hh)
+r_dir_file(thermald, sysfs_soc)
+
 # Create and access to /dev/socket/thermal-.*
 type_transition thermald socket_device:sock_file thermald_socket;
 allow thermald socket_device:dir w_dir_perms;

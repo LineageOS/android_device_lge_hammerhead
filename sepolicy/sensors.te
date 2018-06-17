@@ -28,6 +28,9 @@ allow sensors sensors_data_file:file create_file_perms;
 # Access sensor nodes (/dev/msm_dsps, /dev/sensors)
 allow sensors sensors_device:chr_file rw_file_perms;
 
+# /devices/soc0/{hw_platform,soc_id} (sensors.qcom)
+r_dir_file(sensors, sysfs_soc)
+
 # Access power management controls
 allow sensors power_control_device:chr_file w_file_perms;
 
