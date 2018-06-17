@@ -1,0 +1,2 @@
+# /devices/soc0/hw_platform (libacdbloader.so)
+r_dir_file(audioserver, sysfs_soc)
