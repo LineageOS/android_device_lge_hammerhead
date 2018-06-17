@@ -22,6 +22,8 @@ allow system_server self:netlink_socket create_socket_perms_no_ioctl;
 
 allow system_server sysfs_thermal:file r_file_perms;
 
+allow system_server sensors_device:chr_file getattr;
+
 allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D };
 
 # use MSM ipc router ioctls
