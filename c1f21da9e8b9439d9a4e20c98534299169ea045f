@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "50def853_caa41b1c",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2018-06-18T21:58:39Z",
+      "side": 1,
+      "message": "Looks like all devices in aosp after hammerhead use this value so figured it\u0027s best to use. Shamu made this same transition in this change. The rest started out with north-america.pool.ntp.org.",
+      "parentUuid": "36e8194c_2833450a",
+      "range": {
+        "startLine": 302,
+        "startChar": 25,
+        "endLine": 302,
+        "endChar": 51
+      },
+      "revId": "c1f21da9e8b9439d9a4e20c98534299169ea045f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "570d8f28_43ac04e8",
         "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2018-06-18T11:09:21Z",
       "side": 1,
       "message": "Do we need to transfer ACCURACY_THRES\u003d5000, or that doesn\u0027t apply to the overlay?",
+      "revId": "c1f21da9e8b9439d9a4e20c98534299169ea045f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eaaa9c45_66b47bd0",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2018-06-18T21:58:39Z",
+      "side": 1,
+      "message": "I don\u0027t think so. None of the devices in aosp do it. They only have it in gps.conf.  And looking at the GnssLocationProvider code in f/b, it\u0027s not looking for that property.",
+      "parentUuid": "570d8f28_43ac04e8",
       "revId": "c1f21da9e8b9439d9a4e20c98534299169ea045f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
