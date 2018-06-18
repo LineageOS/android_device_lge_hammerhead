@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "36e8194c_2833450a",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-18T11:09:21Z",
+      "side": 1,
+      "message": "We should either keep the last value in gps.conf (time.gpsonextra.net), or maybe time.izatcloud.net?",
+      "range": {
+        "startLine": 302,
+        "startChar": 25,
+        "endLine": 302,
+        "endChar": 51
+      },
+      "revId": "c1f21da9e8b9439d9a4e20c98534299169ea045f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "570d8f28_43ac04e8",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-18T11:09:21Z",
+      "side": 1,
+      "message": "Do we need to transfer ACCURACY_THRES\u003d5000, or that doesn\u0027t apply to the overlay?",
+      "revId": "c1f21da9e8b9439d9a4e20c98534299169ea045f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
