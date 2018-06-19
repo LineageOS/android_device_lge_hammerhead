@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "dd9425ef_e0b3c146",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-19T07:01:35Z",
+      "side": 1,
+      "message": "Didn\u0027t realize they all switched, which is a bit odd since they used to be more agnostic before. I guess 5X/6P and the Pixels are mostly marketed in NA. What do you think about keeping it pool.ntp.org, per http://www.pool.ntp.org/zone/north-america:\n\u003e In most cases it\u0027s best to use pool.ntp.org to find an NTP server (or 0.pool.ntp.org, 1.pool.ntp.org, etc if you need multiple server names). The system will try finding the closest available servers for you. If you distribute software or equipment that uses NTP, please see our information for vendors.\n\nOnly care about these latencies since they\u0027re probably important for NTP/aGPS, and most N5 users are outside NA. If you\u0027re OK with the global pool, I\u0027m thinking we should have an intermediate change with time.gpsonextra.net -\u003e pool.ntp.org, so this patch only moves flags w/o changing them.",
+      "parentUuid": "50def853_caa41b1c",
+      "range": {
+        "startLine": 302,
+        "startChar": 25,
+        "endLine": 302,
+        "endChar": 51
+      },
+      "revId": "c1f21da9e8b9439d9a4e20c98534299169ea045f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "570d8f28_43ac04e8",
         "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
         "patchSetId": 2
