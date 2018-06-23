@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "454db40c_b27b8875",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2018-06-23T03:07:02Z",
+      "side": 1,
+      "message": "Need to pin the blob by adding sha1 hash.",
+      "revId": "970eb604f612bc4b708f1b0a98ce5ae6cc1b4201",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
