@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ddf95fef_d60fc7e6",
+        "filename": "proprietary-blobs.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 232,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-23T10:12:05Z",
+      "side": 0,
+      "message": "Can we remove this one for sure? We need to check dlopen messages. I\u0027ve been removing libdrmdecrypt.so, but not this one. Maybe there are other L1 blobs that we can remove?",
+      "range": {
+        "startLine": 232,
+        "startChar": 11,
+        "endLine": 232,
+        "endChar": 27
+      },
+      "revId": "9aae27e97d2bbd5032a1fbac9bee4b95c9bc7ea7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
