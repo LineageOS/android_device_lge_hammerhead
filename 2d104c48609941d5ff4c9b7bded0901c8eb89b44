@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e878899_b6444f34",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-27T05:58:53Z",
+      "side": 1,
+      "message": "GLES, or maybe HWUI (not sure OpenGLRenderer is common)",
+      "range": {
+        "startLine": 7,
+        "startChar": 29,
+        "endLine": 7,
+        "endChar": 43
+      },
+      "revId": "2d104c48609941d5ff4c9b7bded0901c8eb89b44",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe3d8766_9465ac0b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-27T05:58:53Z",
+      "side": 1,
+      "message": "deprecated",
+      "range": {
+        "startLine": 7,
+        "startChar": 17,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "2d104c48609941d5ff4c9b7bded0901c8eb89b44",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ebff0376_8571767c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-27T05:58:53Z",
+      "side": 1,
+      "message": "We should follow the 50/72 rule if possible, so hard wraps would be good here.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 121
+      },
+      "revId": "2d104c48609941d5ff4c9b7bded0901c8eb89b44",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
