@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d081d42_9c46e839",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-06-28T10:02:48Z",
+      "side": 1,
+      "message": "Oreo MR1",
+      "range": {
+        "startLine": 9,
+        "startChar": 36,
+        "endLine": 9,
+        "endChar": 40
+      },
+      "revId": "b5b889b46361dd87e676222e811bda85f2fd7925",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
