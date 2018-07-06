@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0033e178_e4ef6edc",
+        "filename": "sepolicy/hal_camera_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-07-06T11:20:50Z",
+      "side": 1,
+      "message": "It would be nice to find an explanation about https://github.com/LineageOS/android_system_sepolicy/blob/lineage-15.1/public/te_macros#L312 failing here.",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 59
+      },
+      "revId": "7208c2a726705eb568d5c3a68c003b3baaa3b426",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
