@@ -22,6 +22,30 @@
       "revId": "7208c2a726705eb568d5c3a68c003b3baaa3b426",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae2d2f4a_b38f00aa",
+        "filename": "sepolicy/hal_camera_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2018-07-07T00:05:51Z",
+      "side": 1,
+      "message": "I could have sworn i tested it with just the unix_socket_send and still saw the sock_file denial. I just double checked again and I was wrong. It\u0027s working correctly with just the unix_socket_send. Update incoming. Thanks.",
+      "parentUuid": "0033e178_e4ef6edc",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 59
+      },
+      "revId": "7208c2a726705eb568d5c3a68c003b3baaa3b426",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
