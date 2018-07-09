@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f92d68b9_3565bb32",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2018-07-09T10:35:29Z",
+      "side": 1,
+      "message": "What\u0027s happening here? If were pedantic to this extent, Change-Id has to be consistent. Still, this is a change with several versions floating around, all superseded by https://android-review.googlesource.com/c/device/google/taimen/+/631332 …",
+      "range": {
+        "startLine": 16,
+        "startChar": 11,
+        "endLine": 16,
+        "endChar": 52
+      },
+      "revId": "824419dc6a84d97c2c9a44d22103e87e7f1d10d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
