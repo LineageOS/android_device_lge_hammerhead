@@ -37,7 +37,7 @@ bin/rmt_storage
 bin/sensors.qcom
 bin/subsystem_ramdump
 bin/thermal-engine-hh
-bin/time_daemon
+bin/time_daemon|e5fe186973b90715ab9a045d4dcd63d0134e2e63
 bin/usbhub
 bin/usbhub_init
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
