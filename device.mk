@@ -228,7 +228,7 @@ PRODUCT_PACKAGES += \
 
 # USB HAL service
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service.basic
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
