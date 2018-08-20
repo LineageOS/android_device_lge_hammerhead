@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "13e5f474_f5c07feb",
+        "filename": "init.hammerhead.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2018-08-20T09:13:53Z",
+      "side": 1,
+      "message": "??? Should be on post-fs-data",
+      "range": {
+        "startLine": 234,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 15
+      },
+      "revId": "04ad893c755ebcc0b51cf81c6e55cf8e4bee4c0d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
