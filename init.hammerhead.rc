@@ -236,6 +236,13 @@ on zygote-start
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
+    mkdir /data/misc/location 0770 gps gps
+    mkdir /data/misc/location/gpsone_d 0770 system gps
+
+on post-fs
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+
 on property:sys.boot_completed=1
     # Enable Power modes
     write /sys/module/lpm_resources/enable_low_power/l2 2
