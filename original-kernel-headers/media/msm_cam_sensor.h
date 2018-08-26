@@ -167,7 +167,6 @@ struct msm_camera_sensor_slave_info {
 struct msm_camera_i2c_reg_array {
 	uint16_t reg_addr;
 	uint16_t reg_data;
-	uint32_t delay;
 };
 
 struct msm_camera_i2c_reg_setting {
@@ -212,7 +211,6 @@ struct msm_camera_csid_vc_cfg {
 struct msm_camera_csid_lut_params {
 	uint8_t num_cid;
 	struct msm_camera_csid_vc_cfg *vc_cfg[MAX_CID];
-	uint32_t vc_cfg_size;
 };
 
 struct msm_camera_csid_params {
@@ -313,19 +311,13 @@ struct sensorb_cfg_data {
 		struct msm_sensor_ois_info_t  ois_info;
 		void                         *setting;
 	} cfg;
-	uint32_t setting_size;
-};
-
-struct msm_sensor_csid_cfg_params {
-	struct msm_camera_csid_params *csid_params;
-	uint32_t                       csid_params_size;
 };
 
 struct csid_cfg_data {
 	enum csid_cfg_type_t cfgtype;
 	union {
 		uint32_t csid_version;
-		struct msm_sensor_csid_cfg_params csid_cfg_params;
+		struct msm_camera_csid_params *csid_params;
 	} cfg;
 };
 
@@ -335,7 +327,6 @@ struct csiphy_cfg_data {
 		struct msm_camera_csiphy_params *csiphy_params;
 		struct msm_camera_csi_lane_params *csi_lane_params;
 	} cfg;
-	uint32_t cfg_params_size;
 };
 
 enum eeprom_cfg_type_t {
@@ -539,10 +530,10 @@ struct msm_camera_led_cfg_t {
 	_IOWR('V', BASE_VIDIOC_PRIVATE + 3, uint32_t)
 
 #define VIDIOC_MSM_CSIPHY_IO_CFG \
-	_IOWR('V', BASE_VIDIOC_PRIVATE + 4, struct csiphy_cfg_data)
+	_IOWR('V', BASE_VIDIOC_PRIVATE + 4, struct csid_cfg_data)
 
 #define VIDIOC_MSM_CSID_IO_CFG \
-	_IOWR('V', BASE_VIDIOC_PRIVATE + 5, struct csid_cfg_data)
+	_IOWR('V', BASE_VIDIOC_PRIVATE + 5, struct csiphy_cfg_data)
 
 #define VIDIOC_MSM_ACTUATOR_CFG \
 	_IOWR('V', BASE_VIDIOC_PRIVATE + 6, struct msm_actuator_cfg_data)
