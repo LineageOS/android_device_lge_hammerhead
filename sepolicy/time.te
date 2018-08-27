@@ -1,5 +1,5 @@
 type time, domain, device_domain_deprecated, mlstrustedsubject;
-type time_exec, exec_type, file_type;
+type time_exec, exec_type, file_type, vendor_file_type;
 
 # Started by init
 init_daemon_domain(time)
