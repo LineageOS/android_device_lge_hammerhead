@@ -3,14 +3,14 @@ type firmware_file, fs_type, contextmount_type;
 
 type qmuxd_socket, file_type;
 type sensors_socket, file_type;
-type camera_socket, file_type;
+type camera_socket, file_type, data_file_type, core_data_file_type;
 type thermald_socket, file_type;
 
-type sensors_data_file, file_type, data_file_type;
-type time_data_file, file_type, data_file_type;
-type ramdump_data_file, file_type, data_file_type;
+type sensors_data_file, file_type, data_file_type, core_data_file_type;
+type time_data_file, file_type, data_file_type, core_data_file_type;
+type ramdump_data_file, file_type, data_file_type, core_data_file_type;
 
-type mpdecision_socket, file_type;
+type mpdecision_socket, file_type, data_file_type, core_data_file_type;
 
 # Persist firmware types
 type persist_file, file_type;
