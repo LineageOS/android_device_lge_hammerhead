@@ -123,7 +123,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/lge/hammerhead/overlay
+    device/lge/hammerhead/overlay \
+    device/lge/hammerhead/overlay-2
+
 
 
 PRODUCT_PACKAGES := \
@@ -144,6 +146,7 @@ PRODUCT_PACKAGES := \
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Live Wallpapers
@@ -258,6 +261,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     power.hammerhead
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
@@ -414,6 +421,15 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
+
+# Google Sans fonts [Needs fonts in fonts directory first]
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    frameworks/base/data/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    frameworks/base/data/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf \
+    frameworks/base/data/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    frameworks/base/data/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf
+
 # Camera configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1
@@ -428,6 +444,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-swap=false
+
+
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
+
 
 # Modem debugger
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
