@@ -67,9 +67,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    device/lge/hammerhead/media_codecs.xml:system/etc/media_codecs.xml \
-    device/lge/hammerhead/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    device/lge/hammerhead/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+    device/lge/hammerhead/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/lge/hammerhead/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+    device/lge/hammerhead/configs/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/wifi/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
 
 # For GPS
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/sec_config:system/etc/sec_config
+    device/lge/hammerhead/gps/sec_config:system/etc/sec_config
 
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
