@@ -286,6 +286,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-service \
+    android.hardware.contexthub@1.0-service \
+    android.hardware.gnss@1.0-service \
+    android.hardware.drm@1.0-service \
+    android.hardware.light@2.0-service \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.sensors@1.0-service \
+    android.hardware.keymaster@3.0-service \
+    android.hardware.keymaster@3.0-service.rc \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-service
+
+
+
 # Set sensor streaming rate
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.max_geomag_rotv=60 \
