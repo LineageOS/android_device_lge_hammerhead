@@ -33,10 +33,10 @@ PRODUCT_COPY_FILES := \
 PRODUCT_SHIPPING_API_LEVEL := 23
 
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead.rc:root/init.hammerhead.rc \
-    device/lge/hammerhead/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
-    device/lge/hammerhead/fstab.hammerhead:root/fstab.hammerhead \
-    device/lge/hammerhead/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
+    device/lge/hammerhead/rootdir/init.hammerhead.rc:root/init.hammerhead.rc \
+    device/lge/hammerhead/rootdir/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
+    device/lge/hammerhead/rootdir/fstab.hammerhead:root/fstab.hammerhead \
+    device/lge/hammerhead/rootdir/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
 
 # Input device files for hammerhead
 PRODUCT_COPY_FILES += \
@@ -457,10 +457,10 @@ PRODUCT_PACKAGES += \
     QXDMLogger
 
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead.diag.rc.userdebug:root/init.hammerhead.diag.rc
+    device/lge/hammerhead/rootdir/init.hammerhead.diag.rc.userdebug:root/init.hammerhead.diag.rc
 else
 PRODUCT_COPY_FILES += \
-    device/lge/hammerhead/init.hammerhead.diag.rc.user:root/init.hammerhead.diag.rc
+    device/lge/hammerhead/rootdir/init.hammerhead.diag.rc.user:root/init.hammerhead.diag.rc
 endif
 
 # setup dalvik vm configs.

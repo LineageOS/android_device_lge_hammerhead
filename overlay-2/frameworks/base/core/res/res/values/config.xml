@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <bool name="config_dozePulsePickup">true</bool>
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBrightnessBucketsInDoze">true</bool>
+    <bool name="config_nightDisplayAvailable">true</bool>
+    <bool name="config_setColorTransformAccelerated">true</bool>
+    <bool name="config_supportSystemNavigationKeys">true</bool>
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+    <bool name="config_supportAudioSourceUnprocessed">true</bool>
+    <bool name="config_sendPackageName">true</bool>
+    <bool name="config_useRoundIcon">true</bool>
+    <string-array name="config_disabledUntilUsedPreinstalledCarrierApps">
+        <item>com.google.android.apps.tycho</item>
+    </string-array>
+    <string-array name="config_nightDisplayColorTemperatureCoefficients">
+        <item>0.0</item>
+        <item>0.0</item>
+        <item>1.0</item>
+        <item>-0.000000014365268757</item>
+        <item>0.000255092801250106</item>
+        <item>-0.064156942434907716</item>
+        <item>-0.000000000910931179</item>
+        <item>0.000207598323269139</item>
+        <item>-0.349361641294833436</item>
+    </string-array>
+    <integer name="config_defaultNotificationLedOn">1000</integer>
+    <integer name="config_defaultNotificationLedOff">9000</integer>
+    <integer name="config_storageManagerDaystoRetainDefault">60</integer>
+    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">4.0dip</dimen>
+    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <string name="config_ims_package">org.codeaurora.ims</string>
+    <string name="config_icon_mask">M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z</string>
+    <string name="config_headlineFontFamily">google-sans</string>
+    <string name="config_headlineFontFamilyLight">google-sans</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    <bool name="config_enableNetworkLocationOverlay" translatable="false">true</bool>
+    <bool name="config_enableFusedLocationOverlay" translatable="false">true</bool>
+    <bool name="config_enableGeocoderOverlay" translatable="false">true</bool>
+    <bool name="config_enableGeofenceOverlay" translatable="false">true</bool>
+</resources>
