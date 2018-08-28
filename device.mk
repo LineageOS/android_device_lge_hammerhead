@@ -132,7 +132,15 @@ PRODUCT_PACKAGES := \
     hostapd \
     wificond \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    android.hardware.wifi.offload@1.0:64 \
+    android.hardware.wifi.supplicant@1.0:64 \
+    android.hardware.wifi.supplicant@1.1:64 \
+    android.hardware.hostapd@1.0:64 \
+    android.hardware.wifi@1.0:64 \
+    android.hardware.wifi@1.1:64 \
+    android.hardware.wifi@1.2:64
+
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
@@ -145,6 +153,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl \
     gralloc.msm8974 \
     libgenlock \
