@@ -2,6 +2,10 @@ OLD_LOCAL_PATH := $(LOCAL_PATH)
 LOCAL_PATH:=$(call my-dir)
 include $(CLEAR_VARS)
 
+# b/24171136 many files not compiling with clang/llvm yet
+LOCAL_CLANG := false
+LOCAL_CXX_STL := none
+
 LOCAL_CFLAGS:= \
         -DAMSS_VERSION=$(AMSS_VERSION) \
         $(mmcamera_debug_defines) \
@@ -30,8 +34,8 @@ LOCAL_C_INCLUDES+= \
         $(LOCAL_PATH)/../../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../../mm-image-codec/qomx_core
 
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+#LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+#LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_CP_MM_HEAP_ID
 ifeq ($(call is-board-platform,msm8974),true)

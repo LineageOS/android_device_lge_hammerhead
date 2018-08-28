@@ -3,6 +3,10 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+LOCAL_CXX_STL := none
+
 MM_CAM_FILES := \
         src/mm_camera_interface.c \
         src/mm_camera.c \
@@ -30,8 +34,8 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_C_INCLUDES += $(call project-path-for,qcom-media)/mm-core/inc
 
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+#LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+#LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS += -Wall -Werror
 
