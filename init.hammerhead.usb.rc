@@ -25,12 +25,7 @@ on boot
 on post-fs
     mkdir /dev/usb-ffs 0770 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
-    mount functionfs adb /dev/usb-ffs/adb noatime uid=2000,gid=2000,no_disconnect=1
-    write /sys/module/g_android/parameters/mtp_rx_req_len 131072
-    write /sys/module/g_android/parameters/mtp_tx_reqs 32
-    setprop sys.usb.ffs.max_write 262144
-    setprop sys.usb.ffs.max_read 262144
-    setprop sys.usb.mtp.device_type 3
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
     write /sys/class/android_usb/android0/f_ffs/aliases adb
 
 # MTP
@@ -44,19 +39,6 @@ on property:sys.usb.config=mtp
     write /sys/class/android_usb/android0/bDeviceProtocol 0
     write /sys/class/android_usb/android0/functions mtp
     write /sys/class/android_usb/android0/enable 1
-    setprop sys.usb.state ${sys.usb.config}
-
-# ADB
-on property:sys.usb.config=adb
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 18D1
-    write /sys/class/android_usb/android0/idProduct 4EE2
-    write /sys/class/android_usb/android0/bDeviceClass 0
-    write /sys/class/android_usb/android0/bDeviceSubClass 0
-    write /sys/class/android_usb/android0/bDeviceProtocol 0
-    write /sys/class/android_usb/android0/functions adb
-    write /sys/class/android_usb/android0/enable 1
-    start adbd
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mtp,adb
