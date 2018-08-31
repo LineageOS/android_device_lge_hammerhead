@@ -126,7 +126,8 @@ TARGET_TOUCHBOOST_FREQUENCY:= 1200
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
 USE_DEVICE_SPECIFIC_CAMERA:= true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /system/bin/cameraserver=22
+    /system/bin/cameraserver=22 \
+    /system/bin/mm-qcamera-daemon=22
 
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
 
