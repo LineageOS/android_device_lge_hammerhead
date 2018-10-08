@@ -232,6 +232,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
+    resize2fs_static \
     e2fsck
 
 PRODUCT_PACKAGES += \
