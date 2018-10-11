@@ -130,4 +130,8 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS:= true
 
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
+
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
