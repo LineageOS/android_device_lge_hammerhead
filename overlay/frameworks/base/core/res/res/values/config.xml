@@ -292,4 +292,7 @@
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
+     <!-- Enable swipe-up gesture -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
 </resources>
