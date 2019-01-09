@@ -250,6 +250,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
 
