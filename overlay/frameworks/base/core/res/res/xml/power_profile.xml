@@ -40,9 +40,13 @@
         <value>4.8</value>
         <value>1.11</value>
     </array>
+    <!-- Power consumption when CPU is idle -->
+    <item name="cpu.suspend">3.2</item>
+    <item name="cpu.idle">17.4</item>
     <!-- Different CPU speeds as reported in
          /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
-    <array name="cpu.speeds">
+    <item name="cpu.clusters.cores">4</item>
+    <array name="cpu.core_speeds.cluster0">
         <value>300000</value> <!-- 300 MHz CPU speed -->
         <value>422400</value> <!-- 422.4 MHz CPU speed -->
         <value>652800</value> <!-- 652.8 MHz CPU speed -->
@@ -58,11 +62,8 @@
         <value>1958400</value> <!-- 1958.4 MHz CPU speed -->
         <value>2265600</value> <!-- 2265.6 MHz CPU speed -->
     </array>
-    <!-- Power consumption when CPU is idle -->
-    <item name="cpu.idle">3.2</item>
-    <item name="cpu.awake">17.4</item>
     <!-- Power consumption at different speeds -->
-    <array name="cpu.active">
+    <array name="cpu.core_power.cluster0">
         <value>57.9</value> <!-- 300 MHz CPU speed -->
         <value>88.2</value> <!-- 422.4 MHz CPU speed -->
         <value>99.6</value> <!-- 652.8 MHz CPU speed -->
