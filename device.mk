@@ -183,7 +183,6 @@ PRODUCT_PACKAGES += \
     libmmcamera_interface \
     libmmjpeg_interface \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
     camera.hammerhead \
     mm-jpeg-interface-test \
     mm-qcamera-app \
@@ -191,7 +190,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service \
     keystore.msm8974
 
 # GPS configuration
