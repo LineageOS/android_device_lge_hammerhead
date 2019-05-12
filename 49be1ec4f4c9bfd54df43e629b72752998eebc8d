@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e87463a3_97411f79",
+        "filename": "device.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 13026
+      },
+      "writtenOn": "2019-05-12T04:54:48Z",
+      "side": 0,
+      "message": "These kinds of changes don\u0027t belong in a commit about manifest regeneration. Do you really need to switch back to passthrough? If so, revert the original atomic commit.",
+      "range": {
+        "startLine": 186,
+        "startChar": 4,
+        "endLine": 186,
+        "endChar": 48
+      },
+      "revId": "49be1ec4f4c9bfd54df43e629b72752998eebc8d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
