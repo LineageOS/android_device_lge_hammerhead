@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c47b8b45_9b88946e",
+        "filename": "init.hammerhead.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2019-07-10T11:55:25Z",
+      "side": 1,
+      "message": "This should not have been added in ps3. It\u0027s actually from another change and has nothing to do with this one.",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 244,
+        "endChar": 53
+      },
+      "revId": "2a902a1ed12f53832a20faf7c523dd338bcb378c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
