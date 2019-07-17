@@ -1,0 +1,5 @@
+allow hal_sensors_default sensors_socket:sock_file create_file_perms;
+type_transition hal_sensors_default socket_device:sock_file sensors_socket "sensor_ctl_socket";
+allow hal_sensors_default socket_device:dir rw_dir_perms;
+allow hal_sensors_default sensors_device:chr_file { getattr };
+allow hal_sensors_default sensors:unix_stream_socket { connectto };

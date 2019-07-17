@@ -1,0 +1,8 @@
+# Is r_file_perms sufficient for /dev/rtc0 ?
+allow time_daemon rtc_device:chr_file rw_file_perms;
+
+# Is w_dir_perms sufficient for time_data_file ?
+allow time_daemon time_data_file:dir rw_dir_perms;
+
+# allow time_daemon self:socket ioctl; ?
+allow time_daemon self:socket *;

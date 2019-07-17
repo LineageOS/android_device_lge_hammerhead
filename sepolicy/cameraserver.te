@@ -1,6 +1,5 @@
 # Interact with sockets
-unix_socket_send(cameraserver, camera, camera)
-allow cameraserver camera_data_file:sock_file write;
+unix_socket_send(cameraserver, camera, mm-qcamerad)
 allow cameraserver property_socket:sock_file { open read write ioctl };
 allow cameraserver init:unix_stream_socket connectto;
 
@@ -10,7 +9,5 @@ allow cameraserver camera_device:chr_file { open read write ioctl };
 allow cameraserver cameraserver:fd use;
 
 # Allow writing to mpdecision
-unix_socket_send(cameraserver, mpdecision, mpdecision)
-
-# Allow access to sysfs
-allow cameraserver sysfs:file { getattr read open };
+unix_socket_send(cameraserver, mpctl, mpdecision)
+allow cameraserver mpctl_socket:dir search;

@@ -1,1 +1,12 @@
-allow init tmpfs:lnk_file create_file_perms;
+allow init debugfs:file write;
+allow init sysfs_android_usb:file { setattr };
+allow init sysfs_devices_system_cpu:file { write };
+allow init sysfs_bluetooth_writable:file { setattr };
+allow init sysfs_surfaceflinger:file { setattr open write };
+allow init sysfs_wlan_fwpath:file { setattr };
+allow init sysfs_mpdecision:file { open write };
+allow init sysfs_power_management:file { setattr open write };
+allow init sysfs_ramdumps:file { open write };
+allow init sysfs_leds:lnk_file { read };
+allow init system_file:{ dir file } { getattr relabelfrom };
+allow init unlabeled:{ dir file } { getattr relabelfrom };

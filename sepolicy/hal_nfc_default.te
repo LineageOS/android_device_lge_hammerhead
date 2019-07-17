@@ -1,0 +1,2 @@
+allow hal_nfc_default nfc_data_file:file create_file_perms;
+allow hal_nfc_default nfc_data_file:dir w_dir_perms;

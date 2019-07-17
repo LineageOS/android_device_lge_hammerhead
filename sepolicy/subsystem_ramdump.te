@@ -1,0 +1,4 @@
+userdebug_or_eng(`
+  allow subsystem_ramdump tombstone_data_file:file create_file_perms;
+  allow subsystem_ramdump tombstone_data_file:dir rw_dir_perms;
+')

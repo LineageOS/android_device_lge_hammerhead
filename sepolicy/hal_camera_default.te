@@ -5,8 +5,8 @@ allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
 # libmmjpeg.so still needs text relocation support
 allow hal_camera_default vendor_file:file execmod;
 
-r_dir_file(hal_camera_default, sysfs_soc)
+r_dir_file(hal_camera_default, sysfs_socinfo)
 
-unix_socket_send(hal_camera_default, camera, camera)
+unix_socket_send(hal_camera_default, camera, mm-qcamerad)
 
-unix_socket_send(hal_camera_default, mpdecision, mpdecision)
+unix_socket_send(hal_camera_default, mpctl, mpdecision)

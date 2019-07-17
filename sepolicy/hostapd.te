@@ -1,0 +1,2 @@
+allow hostapd persist_file:dir r_dir_perms;
+r_dir_file(hostapd, persist_wifi_file)

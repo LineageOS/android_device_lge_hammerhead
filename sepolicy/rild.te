@@ -1,9 +1,2 @@
-# Grant access to Qualcomm MSM Interface (QMI) radio sockets to RILD
-qmux_socket(rild)
-
 r_dir_file(rild, radio_data_file)
-
-# whitelist qualcomm specific ioctls
-allow rild self:socket ioctl;
-allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
 allowxperm rild self:udp_socket ioctl priv_sock_ioctls;

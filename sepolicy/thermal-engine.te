@@ -1,0 +1,10 @@
+allow thermal-engine power_service:service_manager find;
+allow thermal-engine sysfs_leds:file rw_file_perms;
+
+r_dir_file(thermal-engine, mpctl_socket)
+r_dir_file(thermal-engine, sysfs_batteryinfo)
+r_dir_file(thermal-engine, sysfs_socinfo)
+
+binder_call(thermal-engine, servicemanager)
+binder_call(thermal-engine, system_server)
+binder_use(thermal-engine)

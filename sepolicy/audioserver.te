@@ -1,2 +1,4 @@
-# /devices/soc0/hw_platform (libacdbloader.so)
-r_dir_file(audioserver, sysfs_soc)
+r_dir_file(audioserver, sysfs_socinfo)
+
+allow audioserver hal_power_hwservice:hwservice_manager find;
+allow audioserver hal_power_default:binder call;

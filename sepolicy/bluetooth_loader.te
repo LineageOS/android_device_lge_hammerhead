@@ -1,13 +1,1 @@
-# Bluetooth executables and scripts
-type bluetooth_loader, domain, device_domain_deprecated;
-type bluetooth_loader_exec, exec_type, file_type, vendor_file_type;
-
-# Start bdAddrLoader from init
-init_daemon_domain(bluetooth_loader)
-
-# Read mac address from persist partition
-allow bluetooth_loader persist_file:dir search;
 r_dir_file(bluetooth_loader, persist_bluetooth_file)
-
-# Set persist.service.bdroid.* and bluetooth.* property values
-set_prop(bluetooth_loader, bluetooth_prop)

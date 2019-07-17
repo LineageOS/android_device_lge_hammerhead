@@ -1,0 +1,36 @@
+# Interact with other media devices
+allow mm-qcamerad { gpu_device video_device }:chr_file rw_file_perms;
+allow mm-qcamerad { gpu_device video_device }:dir r_dir_perms;
+
+allow mm-qcamerad { hal_camera_default mediacodec }:fd use;
+allow mm-qcamerad { untrusted_app_all priv_app }:fd use;
+
+# Create front and back camera sockets (/data/cam_socket[12])
+allow mm-qcamerad system_data_file:dir w_dir_perms;
+allow mm-qcamerad system_data_file:sock_file unlink;
+
+# Connect to sensor socket (/data/app/sensor_ctl_socket)
+allow mm-qcamerad apk_data_file:dir r_dir_perms;
+unix_socket_connect(mm-qcamerad, sensors, sensors)
+
+allow mm-qcamerad sensors_socket:sock_file read;
+allow mm-qcamerad sensors_device:chr_file rw_file_perms;
+
+# Read mm-qcamerad files from persist filesystem
+allow mm-qcamerad persist_camera_file:dir r_dir_perms;
+allow mm-qcamerad persist_camera_file:file r_file_perms;
+
+allow mm-qcamerad system_file:file execmod;
+allow mm-qcamerad vendor_file:file execmod;
+
+# Interact with sysfs
+allow mm-qcamerad sysfs:file rw_file_perms;
+allow mm-qcamerad sysfs_data:file r_file_perms;
+
+# Interact with /data
+allow mm-qcamerad apk_data_file:dir { getattr read write open search };
+allow mm-qcamerad storage_file:dir { getattr read write open search };
+allow mm-qcamerad storage_file:lnk_file { getattr read write open };
+allow mm-qcamerad mnt_user_file:dir { getattr read write open search };
+allow mm-qcamerad mnt_user_file:lnk_file { getattr read write open };
+allow mm-qcamerad fuse:dir { getattr read write open search };

@@ -10,7 +10,7 @@ allow tee drm_data_file:file create_file_perms;
 
 # Read from persist partition
 allow tee persist_file:dir r_dir_perms;
-r_dir_file(tee, persist_data_file)
+r_dir_file(tee, persist_drm_file)
 r_dir_file(tee, persist_drm_file)
 # Write to drm related pieces of persist partition
 allow tee persist_drm_file:dir create_dir_perms;
@@ -25,5 +25,5 @@ allow tee self:capability { setuid setgid };
 # for anti-rollback protection
 allow tee block_device:dir search;
 allow tee self:capability sys_rawio;
-allow tee drm_block_device:blk_file rw_file_perms;
-allow tee ssd_block_device:blk_file rw_file_perms;
+allow tee rpmb_device:blk_file rw_file_perms;
+allow tee ssd_device:blk_file rw_file_perms;

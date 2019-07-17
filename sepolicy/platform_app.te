@@ -1,3 +1,2 @@
-allow platform_app time:unix_stream_socket connectto;
-
+allow platform_app time_daemon:unix_stream_socket connectto;
 allow platform_app nfc_service:service_manager find;
