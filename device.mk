@@ -105,6 +105,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
 
+# Privapp Whitelist
+PRODUCT_COPY_FILES += \
+    device/lge/hammerhead/permissions/privapp-permissions-aosp.xml:system/etc/permissions/privapp-permissions-aosp.xml
+
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
