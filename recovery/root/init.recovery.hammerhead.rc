@@ -1,0 +1,2 @@
+on fs
+    setprop sys.usb.ffs.aio_compat 1
