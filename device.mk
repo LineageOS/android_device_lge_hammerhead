@@ -226,6 +226,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.hammerhead.usb.rc:root/init.hammerhead.usb.rc \
     $(LOCAL_PATH)/rootdir/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
 
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
