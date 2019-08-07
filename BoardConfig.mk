@@ -53,6 +53,10 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/hammerhead/bluetooth
 # Encryption
 TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE := true
 
+# Fonts
+EXCLUDE_SERIF_FONTS := true
+SMALLER_FONT_FOOTPRINT := true
+
 # Wifi related defines
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 BOARD_WLAN_DEVICE           := bcmdhd
