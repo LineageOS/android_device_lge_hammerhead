@@ -3,9 +3,6 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOTANIMATION_HALF_RES := true
 
-# Inherit proprietary-files
-$(call inherit-product-if-exists, vendor/lge/hammerhead/hammerhead-vendor.mk)
-
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
