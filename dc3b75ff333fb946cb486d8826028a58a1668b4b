@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0061c8d2_0982a52a",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2019-08-08T08:01:19Z",
+      "side": 1,
+      "message": "Not sure this one is a good idea. From comments i\u0027ve seen here in the past it removes some languages.\nAlso, fyi, SMALLER_FONT_FOOTPRINT includes EXCLUDE_SERIF_FONTS, so no need to put both.",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "dc3b75ff333fb946cb486d8826028a58a1668b4b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
