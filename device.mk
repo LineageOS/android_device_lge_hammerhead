@@ -138,11 +138,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.hammerhead
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    librs_jni \
-    LiveWallpapersPicker
-
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
