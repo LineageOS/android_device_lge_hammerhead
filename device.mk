@@ -20,6 +20,9 @@
 #
 # Everything in this directory will become public
 
+# Inherit proprietary-files
+$(call inherit-product-if-exists, vendor/lge/hammerhead/hammerhead-vendor.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
