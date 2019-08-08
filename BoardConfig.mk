@@ -105,9 +105,9 @@ TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-TARGET_RECOVERY_FSTAB = device/lge/hammerhead/fstab.hammerhead
+TARGET_RECOVERY_FSTAB = device/lge/hammerhead/rootdir/fstab.hammerhead
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead
+TARGET_RELEASETOOLS_EXTENSIONS := device/lge/hammerhead/releasetools
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.hammerhead
 
