@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fcd6c1b_be563fcf",
+        "filename": "device.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2019-08-23T06:18:29Z",
+      "side": 1,
+      "message": "I guess this is not needed.\nhttps://github.com/LineageOS/android_build/blob/lineage-16.0/target/product/core_minimal.mk#L81",
+      "revId": "94331e136ed2704e7ec7280438ee00c605d5b235",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
