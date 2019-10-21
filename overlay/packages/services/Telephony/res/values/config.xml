@@ -25,4 +25,10 @@
     <bool name="config_enabled_lte" translatable="false">true</bool>
     <!-- Show APN Settings for some CDMA carriers -->
     <bool name="config_show_apn_setting_cdma">true</bool>
+
+    <!-- Flag indicating if network query through TelephonyManager.requestNetworkScan() should be
+         disabled.
+         If set to true, it will send network query through Phone.getAvailableNetworks() directly
+         rather than attempt to query through TelephonyManager.requestNetworkScan() first. -->
+    <bool name="config_disable_TelephonyManager_network_scan">true</bool>
 </resources>
