@@ -1,1 +1,19 @@
 allow init tmpfs:lnk_file create_file_perms;
+
+allow init {
+   sysfs_bluetooth_writable
+   sysfs_leds
+   sysfs_surfaceflinger
+   sysfs_wlan_fwpath
+ }:file setattr;
+
+allow init {
+   sysfs_adsp 
+   sysfs_devices_system_cpu
+   sysfs_mpdecision
+   sysfs_irq 
+   sysfs_ramdump
+   sysfs_ssr_toggle
+   sysfs_thermal_control
+ }:file w_file_perms;
+
