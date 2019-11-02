@@ -26,3 +26,8 @@ type sysfs_mpdecision, fs_type, sysfs_type;
 type sysfs_surfaceflinger, fs_type, sysfs_type;
 type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 type sysfs_soc, fs_type, sysfs_type;
+type sysfs_adsp, fs_type, sysfs_type;
+type sysfs_thermal_control, fs_type, sysfs_type;
+type sysfs_ssr_toggle, fs_type, sysfs_type;
+type sysfs_ramdump, fs_type, sysfs_type;
+type sysfs_irq, fs_type, sysfs_type;
