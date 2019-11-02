@@ -162,11 +162,32 @@
 #sysfs - net
 /sys/devices/virtual/net(/.*)?   u:object_r:sysfs_net:s0
 
+/sys/devices/mdp\.0/qcom,mdss_fb_primary.160/leds/lcd-backlight/brightness    u:object_r:sysfs_leds:s0
+/sys/devices/leds-qpnp-23/leds(/.*)?        u:object_r:sysfs_leds:s0
+
+/sys/kernel/boot_adsp/boot     u:object_r:sysfs_adsp:s0
+
+/sys/module/msm_thermal/core_control/enabled    u:object_r:sysfs_thermal_control:s0
+
+/sys/devices/fe200000\.qcom,lpass/subsys[0-2]/restart_level     u:object_r:sysfs_ssr_toggle:s0
+/sys/devices/fc880000\.qcom,mss/subsys[0-2]/restart_level       u:object_r:sysfs_ssr_toggle:s0
+/sys/devices/fdce0000\.qcom,venus/subsys[0-2]/restart_level     u:object_r:sysfs_ssr_toggle:s0
+
+/sys/module/subsystem_restart/parameters/enable_ramdumps        u:object_r:sysfs_ramdump:s0
+
+/sys/devices/msm_dwc3/f9200000\.dwc3/gadget/lun[0-9]+(/.*)?     u:object_r:sysfs_android_usb:s0
+
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
 
 # Bluetooth
-/sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/state     u:object_r:sysfs_bluetooth_writable:s0
+/sys/devices/platform/bluetooth_rfkill/rfkill/rfkill0/type      u:object_r:sysfs_bluetooth_writable:s0
+
+/sys/module/lpm_resources/enable_low_power(/.*)?            u:object_r:sysfs_mpdecision:s0
+
+/sys/module/slimport/parameters/enable_irq                  u:object_r:sysfs_irq:s0
+/sys/module/msm_show_resume_irq/parameters/debug_mask       u:object_r:sysfs_irq:s0
 
 # Thermal engine
 /dev/msm_thermal_query            u:object_r:thermal_engine_device:s0
