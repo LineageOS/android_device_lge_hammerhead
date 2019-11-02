@@ -159,6 +159,9 @@
 
 /sys/devices/msm_sdcc.1/mmc_host/mmc1/mmc1:0001/block/mmcblk0/stat	u:object_r:sysfs_disk_stat:s0
 
+#sysfs - net
+/sys/devices/virtual/net(/.*)? 	u:object_r:sysfs_net:s0
+
 # Sysfs files used by qmuxd
 /sys/devices/virtual/smdpkt/smdcntl([0-9])+/open_timeout u:object_r:sysfs_smdcntl_open_timeout:s0
 
