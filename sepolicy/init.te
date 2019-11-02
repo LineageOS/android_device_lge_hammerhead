@@ -1,1 +1,11 @@
 allow init tmpfs:lnk_file create_file_perms;
+
+allow init {
+   sysfs_wlan_fwpath
+   sysfs_surfaceflinger
+   sysfs_bluetooth_writable
+  }:file setattr;
+
+allow init {sysfs_devices_system_cpu sysfs_mpdecision}:file w_file_perms;
+
+allow init sysfs:file {setattr w_file_perms};
