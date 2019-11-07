@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "60cb251c_739c76b7",
+        "filename": "sepolicy/surfaceflinger.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2019-11-07T20:02:37Z",
+      "side": 1,
+      "message": "This is to broad. Label the appropriate path instead.",
+      "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
