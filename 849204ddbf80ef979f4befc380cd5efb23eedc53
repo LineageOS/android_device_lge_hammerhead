@@ -22,6 +22,30 @@
       "revId": "849204ddbf80ef979f4befc380cd5efb23eedc53",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8abe4a2c_559c30ec",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 21793
+      },
+      "writtenOn": "2019-11-07T19:08:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "eecb9268_03969171",
+      "range": {
+        "startLine": 3,
+        "startChar": 12,
+        "endLine": 3,
+        "endChar": 13
+      },
+      "revId": "849204ddbf80ef979f4befc380cd5efb23eedc53",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
