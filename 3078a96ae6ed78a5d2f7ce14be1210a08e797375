@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c44d6285_3b470bd6",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2019-11-08T07:39:30Z",
+      "side": 1,
+      "message": "As long as you\u0027re doing it in file_contexts this is fine.\nIf you chose to use genfscon which doesn\u0027t support wildcards you have to do it one by one",
+      "parentUuid": "cb491374_0da02e68",
+      "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "60cb251c_739c76b7",
         "filename": "sepolicy/surfaceflinger.te",
         "patchSetId": 2
