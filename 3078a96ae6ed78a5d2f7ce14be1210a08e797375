@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "cb491374_0da02e68",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 21793
+      },
+      "writtenOn": "2019-11-08T00:35:21Z",
+      "side": 1,
+      "message": "Should I revert this and label the problematic graphic devices one by one?",
+      "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "60cb251c_739c76b7",
         "filename": "sepolicy/surfaceflinger.te",
         "patchSetId": 2
@@ -13,6 +30,24 @@
       "writtenOn": "2019-11-07T20:02:37Z",
       "side": 1,
       "message": "This is to broad. Label the appropriate path instead.",
+      "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "49a839dc_cf3a0cf6",
+        "filename": "sepolicy/surfaceflinger.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 21793
+      },
+      "writtenOn": "2019-11-08T00:35:21Z",
+      "side": 1,
+      "message": "Seems to be redundant, unable to reproduce.",
+      "parentUuid": "60cb251c_739c76b7",
       "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
