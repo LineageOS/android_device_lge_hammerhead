@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f017ef0e_caf57c0b",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1053
+      },
+      "writtenOn": "2019-11-10T07:12:33Z",
+      "side": 1,
+      "message": "Use spaces",
+      "revId": "0c0a90d68460c2947f5463482d2b2317f2fa7ceb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
