@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "074b5d76_ebc0d467",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 21793
+      },
+      "writtenOn": "2019-11-10T21:24:54Z",
+      "side": 1,
+      "message": "Unable to test it at the moment, but guess it should work out.",
+      "parentUuid": "cae3c1d1_18aa2528",
+      "range": {
+        "startLine": 166,
+        "startChar": 0,
+        "endLine": 168,
+        "endChar": 72
+      },
+      "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0870dc08_b50a5604",
         "filename": "sepolicy/init.te",
         "patchSetId": 5
@@ -39,6 +63,24 @@
       "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e683e276_2ff515c9",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 21793
+      },
+      "writtenOn": "2019-11-10T21:24:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0870dc08_b50a5604",
+      "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
