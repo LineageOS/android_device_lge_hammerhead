@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cae3c1d1_18aa2528",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 5
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2019-11-10T18:14:48Z",
+      "side": 1,
+      "message": "think you can reduce these 3 lines to /sys/devices/leds-qpnp-23/leds(/.*)?        u:object_r:sysfs_leds:s0",
+      "range": {
+        "startLine": 166,
+        "startChar": 0,
+        "endLine": 168,
+        "endChar": 72
+      },
+      "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0870dc08_b50a5604",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2019-11-10T18:14:48Z",
+      "side": 1,
+      "message": "extra new line",
+      "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
