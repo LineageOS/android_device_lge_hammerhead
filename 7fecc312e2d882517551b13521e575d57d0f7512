@@ -81,6 +81,24 @@
       "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6cd51d6f_30055acf",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7118
+      },
+      "writtenOn": "2019-11-11T03:32:52Z",
+      "side": 1,
+      "message": "you removed 2 lines.  only 1 needed to be removed.  i\u0027ll fix it and test the hh-p-sepolicy topic.",
+      "parentUuid": "e683e276_2ff515c9",
+      "revId": "7fecc312e2d882517551b13521e575d57d0f7512",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
