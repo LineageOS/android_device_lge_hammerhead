@@ -141,8 +141,8 @@
 /sys/module/pm2/modes(/.*)?            u:object_r:sysfs_mpdecision:s0
 /sys/module/pm_8x60/modes(/.*)?        u:object_r:sysfs_mpdecision:s0
 
-# Sysfs files used by surfaceflinger
-/sys/devices/virtual/graphics/fb([0-2])+(/.*)? 	u:object_r:sysfs_surfaceflinger:s0
+# Sysfs files used for graphics
+/sys/devices/virtual/graphics/fb([0-2])+(/.*)? 	u:object_r:sysfs_graphics:s0
 
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk        u:object_r:sysfs_thermal:s0
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk    u:object_r:sysfs_thermal:s0

@@ -2,8 +2,8 @@ allow init tmpfs:lnk_file create_file_perms;
 
 allow init {
    sysfs_bluetooth_writable
+   sysfs_graphics
    sysfs_leds
-   sysfs_surfaceflinger
    sysfs_wlan_fwpath
  }:file setattr;
 

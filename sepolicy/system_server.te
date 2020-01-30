@@ -22,7 +22,7 @@ allow system_server self:netlink_socket create_socket_perms_no_ioctl;
 
 allow system_server sysfs_thermal:file r_file_perms;
 
-allow system_server sysfs_surfaceflinger:file write;
+allow system_server sysfs_graphics:file write;
 
 allow system_server sensors_device:chr_file getattr;
 
