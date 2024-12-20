@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "cb491374_0da02e68",
         "filename": "sepolicy/file_contexts",
@@ -14,10 +15,10 @@
       "side": 1,
       "message": "Should I revert this and label the problematic graphic devices one by one?",
       "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "c44d6285_3b470bd6",
         "filename": "sepolicy/file_contexts",
@@ -32,10 +33,28 @@
       "message": "As long as you\u0027re doing it in file_contexts this is fine.\nIf you chose to use genfscon which doesn\u0027t support wildcards you have to do it one by one",
       "parentUuid": "cb491374_0da02e68",
       "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5441a4f_196e16ca",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-20T02:45:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c44d6285_3b470bd6",
+      "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
       "key": {
         "uuid": "60cb251c_739c76b7",
         "filename": "sepolicy/surfaceflinger.te",
@@ -49,10 +68,10 @@
       "side": 1,
       "message": "This is to broad. Label the appropriate path instead.",
       "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": true,
       "key": {
         "uuid": "49a839dc_cf3a0cf6",
         "filename": "sepolicy/surfaceflinger.te",
@@ -67,8 +86,25 @@
       "message": "Seems to be redundant, unable to reproduce.",
       "parentUuid": "60cb251c_739c76b7",
       "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b281356_e6ed37a4",
+        "filename": "sepolicy/surfaceflinger.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-20T02:45:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "49a839dc_cf3a0cf6",
+      "revId": "3078a96ae6ed78a5d2f7ce14be1210a08e797375",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
