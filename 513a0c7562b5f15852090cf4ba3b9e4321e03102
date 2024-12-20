@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b25fad37_8fcc989a",
+        "filename": "sepolicy/init.te",
+        "patchSetId": 7
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-20T02:49:06Z",
+      "side": 1,
+      "message": "newline",
+      "revId": "513a0c7562b5f15852090cf4ba3b9e4321e03102",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
