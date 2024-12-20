@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+      "unresolved": true,
       "key": {
         "uuid": "0ad154c4_cf0339c5",
         "filename": "sepolicy/file_contexts",
@@ -14,8 +15,25 @@
       "side": 1,
       "message": "Use spaces instead of tabs like in the rest of the file",
       "revId": "641ede57d1cf34800119b5ca7d8b0867da31d58e",
-      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
-      "unresolved": true
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73c67d4e_5ea6816e",
+        "filename": "sepolicy/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-20T02:43:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ad154c4_cf0339c5",
+      "revId": "641ede57d1cf34800119b5ca7d8b0867da31d58e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
